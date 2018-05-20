@@ -36,22 +36,8 @@ gulp.task('sass', function(){
 })
 
 // template engine nunjukcs => html
-// gulp.task('nunjucks', function() {
-//   // Gets .html and .nunjucks files in pages
-//   return gulp.src(src + '/pages/**/*.nunjucks')
-//   // Renders template with nunjucks
-//   .pipe(nunjucksRender({
-//       path: [src + '/templates']
-//     }))
-//   // output files in app folder
-//   .pipe(gulp.dest('src'))
-// });
 gulp.task('nunjucks', function() {
   return gulp.src(src + '/pages/**/*.+(html|njk|nunjucks)')
-  // We do not need the data.json for this demo but you can use it if you wanna
-    //.pipe(data(function(){
-    //  return require('./src/data.json');
-    //}))
     .pipe(nunjucksRender({
       path: [src + '/templates/']
     }))
