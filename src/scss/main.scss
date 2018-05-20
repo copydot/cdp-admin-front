@@ -1,0 +1,6 @@
+$color-primary: #eee;
+
+body{
+  background-color: $color-primary;
+  color: darken($color-primary, 70%)
+}
