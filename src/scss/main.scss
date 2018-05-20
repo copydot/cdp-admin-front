@@ -4,3 +4,7 @@ body{
   background-color: $color-primary;
   color: darken($color-primary, 70%)
 }
+
+.m-text {
+    border: solid 2px green;
+}

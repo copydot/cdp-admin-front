@@ -1,3 +1,6 @@
 body {
   background-color: #eee;
   color: #3c3c3c; }
+
+.m-text {
+  border: solid 2px green; }

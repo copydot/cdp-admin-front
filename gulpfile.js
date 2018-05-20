@@ -9,6 +9,7 @@ var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano'); // min css
 var del = require('del');
 var runSequence = require('run-sequence');
+var nunjucksRender = require('gulp-nunjucks-render'); // template engine
 
 // directorio de desarrollo
 var src = 'src';
@@ -34,11 +35,39 @@ gulp.task('sass', function(){
   }))
 })
 
+// template engine nunjukcs => html
+// gulp.task('nunjucks', function() {
+//   // Gets .html and .nunjucks files in pages
+//   return gulp.src(src + '/pages/**/*.nunjucks')
+//   // Renders template with nunjucks
+//   .pipe(nunjucksRender({
+//       path: [src + '/templates']
+//     }))
+//   // output files in app folder
+//   .pipe(gulp.dest('src'))
+// });
+gulp.task('nunjucks', function() {
+  return gulp.src(src + '/pages/**/*.+(html|njk|nunjucks)')
+  // We do not need the data.json for this demo but you can use it if you wanna
+    //.pipe(data(function(){
+    //  return require('./src/data.json');
+    //}))
+    .pipe(nunjucksRender({
+      path: [src + '/templates/']
+    }))
+    .pipe(gulp.dest('src'))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
+});
+
 // watch
 gulp.task('watch',['browserSync', 'sass'], function(){
   gulp.watch(src + '/*.html', browserSync.reload);
   gulp.watch(src + '/scss/**/*.scss', ['sass']);
   gulp.watch(src + '/js/**/*.js', browserSync.reload);
+  gulp.watch(src + '/pages/**/*.+(html|njk|nunjucks)', ['nunjucks']);
+  gulp.watch(src + '/templates/**/*.+(html|njk|nunjucks)', ['nunjucks']);
 })
 
 // optimization
@@ -56,7 +85,7 @@ gulp.task('clean:dist', function() {
 
 // default
 gulp.task('default', function (callback) {
-  runSequence(['sass','browserSync', 'watch'],
+  runSequence(['sass','nunjucks','browserSync', 'watch'],
     callback
   )
 })
