@@ -1,6 +1,20 @@
+html {
+  min-width: 100%;
+  position: relative; }
+
 body {
   background-color: #eee;
   color: #3c3c3c; }
 
 .m-text {
   border: solid 2px green; }
+
+.login {
+  display: table;
+  width: 100%;
+  height: 100vh; }
+  .login .container {
+    display: table-cell;
+    vertical-align: middle; }
+    .login .container .card {
+      margin-top: -60px; }

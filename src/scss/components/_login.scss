@@ -1,0 +1,17 @@
+//
+// login
+
+.login{
+  display: table;
+  width: 100%;
+  height: 100vh;
+  //background-color: blue;
+  .container{
+    display: table-cell;
+    vertical-align: middle;
+    //background-color: blue;
+    .card{
+      margin-top: -60px;
+    }
+  }
+}
