@@ -12,7 +12,7 @@ var runSequence = require('run-sequence');
 var nunjucksRender = require('gulp-nunjucks-render'); // template engine
 
 // directorio de desarrollo
-var src = 'src';
+var src = 'app';
 // directorio de produccion
 var dist = 'dist';
 
@@ -41,7 +41,7 @@ gulp.task('nunjucks', function() {
     .pipe(nunjucksRender({
       path: [src + '/templates/']
     }))
-    .pipe(gulp.dest('src'))
+    .pipe(gulp.dest(src))
     .pipe(browserSync.reload({
       stream: true
     }));
