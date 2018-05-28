@@ -1,0 +1,10 @@
+html{
+  min-width: 100%;
+  position: relative;
+}
+
+body,
+.gg-splash-screen{
+  background-color: $color-primary;
+  color: darken($color-primary, 70%)
+}

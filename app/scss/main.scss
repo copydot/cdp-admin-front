@@ -1,17 +1,4 @@
-$color-primary: #eee;
+@import "components/variables";
 
-html{
-  min-width: 100%;
-  position: relative;
-}
-
-body{
-  background-color: $color-primary;
-  color: darken($color-primary, 70%)
-}
-
-.m-text {
-    border: solid 2px green;
-}
-
+@import "components/base";
 @import "components/login";
