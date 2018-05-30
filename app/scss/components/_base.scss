@@ -1,10 +1,17 @@
 html{
-  min-width: 100%;
+  min-height: 100%;
   position: relative;
 }
 
-body,
-.gg-splash-screen{
-  background-color: $color-primary;
-  color: darken($color-primary, 70%)
+body{
+  background-color: #fff;
+  margin-top: 56px;
+  margin-bottom: 60px;
+
+  &.gg-splash-screen{
+    margin-top: 0px;
+    background-color: $color-primary;
+    color: darken($color-primary, 70%)
+  }
+
 }

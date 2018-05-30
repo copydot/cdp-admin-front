@@ -1,11 +1,15 @@
 html {
-  min-width: 100%;
+  min-height: 100%;
   position: relative; }
 
-body,
-.gg-splash-screen {
-  background-color: #eee;
-  color: #3c3c3c; }
+body {
+  background-color: #fff;
+  margin-top: 56px;
+  margin-bottom: 60px; }
+  body.gg-splash-screen {
+    margin-top: 0px;
+    background-color: #eee;
+    color: #3c3c3c; }
 
 .gg-login {
   padding-top: 100px; }
@@ -33,3 +37,56 @@ body,
       text-align: right; }
   .gg-login .gg-back {
     font-size: 0.9em; }
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 60px;
+  line-height: 60px;
+  background-color: #eee; }
+
+.heading {
+  margin-bottom: 24px;
+  color: #555; }
+  .heading.heading-large {
+    padding: 40px 0px 16px 0;
+    font-size: 3.2em; }
+  .heading.heading-medium {
+    padding: 30px 0px 16px 0;
+    font-size: 2.4em; }
+  .heading.heading-small {
+    padding: 16px 0px 16px 0;
+    font-size: 1.6em; }
+  .heading.heading-border {
+    border-bottom: 1px solid #e5e5e5; }
+
+.dashboard a {
+  text-decoration: none;
+  border-radius: 5px;
+  display: block; }
+  .dashboard a:hover {
+    background-color: #333;
+    color: white; }
+  .dashboard a .card {
+    background-color: transparent;
+    margin-bottom: 30px; }
+    .dashboard a .card .card-header,
+    .dashboard a .card .card-footer {
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 2px; }
+    .dashboard a .card .card-body {
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .dashboard a .card .card-body .card-text {
+        text-transform: uppercase; }
+        .dashboard a .card .card-body .card-text.card-month {
+          font-size: 1.2em; }
+        .dashboard a .card .card-body .card-text.card-day {
+          font-size: 2em;
+          font-weight: 600; }
+        .dashboard a .card .card-body .card-text.card-list {
+          font-size: 1.2em; }
