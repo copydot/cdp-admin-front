@@ -62,63 +62,90 @@
 
 
   
-<div class="dashboard">
+<div>
   <div class="container">
 
-    <div class="heading heading-lg  heading-border">
-      Dashboard
+    <div class="heading heading-lg heading-border">
+      Listas
     </div>
 
-    <section class="panel">
+    <section>
 
-      <div class="heading heading-sm heading-uppercase bg-primary text-light text-center">
-        Próximos eventos
+      <div class="heading heading-sm heading-uppercase bg-info text-light text-center">
+       Sábado 9 de Junio de 2018
       </div>
-
       <div class="row ">
 
-        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-          <a href="list-view.html" class="btn-block">
-            <div class="card">
-              <div class="card-header"></div>
-              <div class="card-body card-body-lg">
-                <div class="card-text card-month">Junio 2018</div>
-                <div class="card-text card-day">Sábado 9</div>
-                <div class="card-text card-list">
-                  Listas creadas <span class="badge badge-primary">1</span>
+        <div class="col-12- col-md-8">
+
+          <div class="heading heading-sm">
+            Ingrese Nueva Lista
+          </div>
+
+          <form id="form">
+
+            <div class="form-group">
+              <label for="">Titulo <span class="text-danger">(*)</span> </label>
+              <input type="text" name="" id="title" value="" class="form-control">
+            </div>
+
+            <div class="row">
+              <div class="col-12 col-md-4">
+                <div class="form-group">
+                  <label for="">Fecha Evento</label>
+                  <input type="date" name="" value="" class="form-control">
                 </div>
               </div>
-              <div class="card-footer"></div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-          <a href="list-view.html" class="btn-block">
-            <div class="card">
-              <div class="card-header"></div>
-              <div class="card-body card-body-lg">
-                <div class="card-text card-month">Junio 2018</div>
-                <div class="card-text card-day">Sábado 15</div>
-                <div class="card-text card-list">
-                  Listas creadas <span class="badge badge-secondary">0</span>
+              <div class="col-12 col-md-4">
+                <div class="form-group">
+                  <label for="">Fecha Vencimiento</label>
+                  <input type="date" name="" value="" class="form-control">
                 </div>
               </div>
-              <div class="card-footer"></div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-          <a href="event-add.html" class="btn-block">
-            <div class="card bg-primary text-white">
-              <div class="card-header"></div>
-              <div class="card-body card-body-lg">
-                <i class="fas fa-5x fa-plus"></i>
+              <div class="col-12 col-md-4">
+                <div class="form-group">
+                  <label for="">Hora Vencimiento</label>
+                  <input type="time" name="" value="" class="form-control">
+                </div>
               </div>
-              <div class="card-footer"></div>
             </div>
-          </a>
+
+            <div class="form-group">
+              <label for="">Descripción</label>
+              <textarea name="name" rows="8" cols="80" class="form-control"></textarea>
+            </div>
+
+            <div class="text-muted mb-4">
+              <span class="text-danger">(*)</span> Campos obligatorios
+            </div>
+
+            <a href="./list-view.html" class="btn btn-secondary">Cancelar</a>
+            <button type="button" onclick="validateForm();" class="btn btn-info btn-lg float-right">Crear listas</button>
+
+
+          </form>
+
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="heading heading-sm">
+            Próximos eventos
+          </div>
+          <div class="card mb-4">
+            <div class="card-body">
+              <p>JUNIO 2018</p>
+              <h3 class="card-title">SÁBADO 9</h3>
+              <hr>
+              <p><a href="#">Listas creadas</a> <span class="badge badge-success">1</span></p>
+            </div>
+          </div>
+          <div class="card mb-4">
+            <div class="card-body">
+              <p>JUNIO 2018</p>
+              <h3 class="card-title">SÁBADO 15</h3>
+              <hr>
+              <p>Listas creadas <span class="badge badge-secondary">0</span></p>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -147,6 +174,31 @@
 
 
   
+<script type="text/javascript">
+  function validateForm(){
+
+  var title = document.getElementById('title').value.trim();
+
+  if (title === ''){
+    swal(
+      'Oops´...',
+      'Faltan completar campos obligatorios!',
+      'error'    );
+    return false;
+  }else{
+    $('.form-control').val('');
+    swal({
+      title: "Buen trabajo!",
+      text: "Su registro fue creado con éxito!",
+      icon: "success",
+      buttons: "Cerrar!"
+    });
+  }
+}
+
+  // swal("Good job!", "You clicked the button!", "success");
+</script>
+
 
 </body>
 </html>

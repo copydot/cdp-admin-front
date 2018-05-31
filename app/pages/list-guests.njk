@@ -1,0 +1,116 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<div>
+  <div class="container">
+
+    <div class="heading heading-lg heading-border">
+      Listas
+    </div>
+
+    <section>
+
+      <div class="heading heading-sm heading-uppercase bg-info text-light text-center">
+       Lista de invitados: Sábado 9 de Junio de 2018
+      </div>
+      <div class="row ">
+
+        <div class="col-12- col-md-4">
+          <div class="heading heading-sm">
+            Buscar Personas
+          </div>
+          <form >
+            <div class="input-group mb-4">
+              <input type="text" class="form-control" placeholder="Ingrese el Nombre o DNI" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Buscar</button>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <h4>Nombre y Apellido</h4>
+            <p>
+              DNI: 123456789 <br>
+              EMAIL: mail@mail.com
+            </p>
+            <button type="button" name="button" class="btn btn-lg btn-block btn-info">
+              AGREGAR A LA LISTA <i class="fas fa-fw fa-angle-right"></i>
+            </button>
+            <hr class="mb-4">
+            <h5 class="text-danger">Persona no encontrada</h5>
+            <button type="button" name="button" class="btn btn-lg btn-block btn-info">
+              AGREGAR NUEVA PERSONA <i class="fas fa-fw fa-plus"></i>
+            </button>
+            <div class="mt-5">
+              <a href="list-view.html" class="btn btn-info"><i class="fas fa-angle-left"></i> volver</a>
+            </div>
+          </form>
+        </div>
+        <div class="col-12 col-md-8">
+
+          <div class="heading heading-sm">
+            Lista de Invitados
+          </div>
+
+          <div class="card mb-5">
+
+            <ul class="list-group list-group-flush">
+              {% for i in range(0, 20) %}
+
+                {% if i < 7 %}
+                <li class="list-group-item">
+                  Nombre de invitado {{ i }}
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-info"></i>
+                    <i class="fas fa-fw fa-lg fa-times text-secondary"></i>
+                  </span>
+                </li>
+                {% else %}
+                <li class="list-group-item">
+                  Nombre de invitado {{ i }}
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-secondary"></i>
+                    <a href="#">
+                      <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                    </a>
+                  </span>
+                </li>
+                {% endif %}
+
+              {% endfor %}
+            </ul>
+          </div>
+          <button type="button" name="button" class="btn btn-lg btn-info">
+            Cerrar lista
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+  function validateForm(){
+
+    var title = document.getElementById('title').value.trim();
+
+    if (title === ''){
+      swal(
+        'Oops´...',
+        'Faltan completar campos obligatorios!',
+        'error'    );
+      return false;
+    }else{
+      $('.form-control').val('');
+      swal({
+        title: "Buen trabajo!",
+        text: "Su registro fue creado con éxito!",
+        icon: "success",
+        buttons: "Cerrar!"
+      });
+    }
+  }
+</script>
+{% endblock %}

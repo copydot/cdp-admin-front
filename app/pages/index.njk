@@ -13,11 +13,11 @@
           <form>
 
             <div class="form-group">
-              <input type="text" name="username" value="" placeholder="Usuario" class="form-control">
+              <input type="text" name="username" id="username" value="" placeholder="Usuario" class="form-control">
             </div>
 
             <div class="form-group">
-              <input type="password" name="password" value="" placeholder="Password" class="form-control">
+              <input type="password" name="password" id="password" value="" placeholder="Password" class="form-control">
             </div>
 
             <div class="form-group row login-tools">
@@ -37,8 +37,7 @@
                 <button type="button" class="btn btn-block btn-light">Registrarme</button>
               </div>
               <div class="col-6 ">
-                {# <button type="button" class="btn btn-block btn-primary">Ingresar</button> #}
-                <a href="dashboard.html" class="btn btn-block btn-primary">Ingresar</a>
+                <button type="button" onclick="validateLog();" class="btn btn-block btn-primary">Ingresar</button>
               </div>
             </div>
           </form>
@@ -47,4 +46,25 @@
     </div>
   </div>
 </div>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+  function validateLog(){
+
+    var username = document.getElementById('username').value.trim();
+    var password = document.getElementById('password').value.trim();
+
+    if (username === '' || password === ''){
+      swal(
+        'Oops´...',
+        'Debe ingresar usuario y contraseña!',
+        'error'    );
+      return false;
+    }else{
+      $('.form-control').val('');
+      location.href = "dashboard.html";
+    }
+  }
+</script>
 {% endblock %}

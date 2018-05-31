@@ -1,0 +1,443 @@
+<!-- layout.njk -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Admin Frontend v.1.0.0</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+<!--build:css css/main.min.css -->
+<link rel="stylesheet" href="./css/main.css">
+<!-- endbuild -->
+
+
+</head>
+<body>
+
+  <!-- src/templates/partials/navigation.njk -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="./dashboard.html">ADMINISTRADOR</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard.html">Eventos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="list-view.html">Listas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Personas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Usuarios</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Notificaciones <span class="badge badge-danger text-light">3</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Username <i class="fas fa-fw fa-user-circle"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Cuenta <i class="fas fa-fw fa-user"></i></a>
+            <a class="dropdown-item" href="#">Configuración <i class="fas fa-fw fa-cog"></i></a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="./">Cerrar Session <i class="fas fa-fw fa-sign-out-alt"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  
+<div>
+  <div class="container">
+
+    <div class="heading heading-lg heading-border">
+      Listas
+    </div>
+
+    <section>
+
+      <div class="heading heading-sm heading-uppercase bg-info text-light text-center">
+       Lista de invitados: Sábado 9 de Junio de 2018
+      </div>
+      <div class="row ">
+
+        <div class="col-12- col-md-4">
+          <div class="heading heading-sm">
+            Buscar Personas
+          </div>
+          <form >
+            <div class="input-group mb-4">
+              <input type="text" class="form-control" placeholder="Ingrese el Nombre o DNI" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Buscar</button>
+              </div>
+            </div>
+            <hr class="mb-4">
+            <h4>Nombre y Apellido</h4>
+            <p>
+              DNI: 123456789 <br>
+              EMAIL: mail@mail.com
+            </p>
+            <button type="button" name="button" class="btn btn-lg btn-block btn-info">
+              AGREGAR A LA LISTA <i class="fas fa-fw fa-angle-right"></i>
+            </button>
+            <hr class="mb-4">
+            <h5 class="text-danger">Persona no encontrada</h5>
+            <button type="button" name="button" class="btn btn-lg btn-block btn-info">
+              AGREGAR NUEVA PERSONA <i class="fas fa-fw fa-plus"></i>
+            </button>
+            <div class="mt-5">
+              <a href="list-view.html" class="btn btn-info"><i class="fas fa-angle-left"></i> volver</a>
+            </div>
+          </form>
+        </div>
+        <div class="col-12 col-md-8">
+
+          <div class="heading heading-sm">
+            Lista de Invitados
+          </div>
+
+          <div class="card mb-5">
+
+            <ul class="list-group list-group-flush">
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 0
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-info"></i>
+                    <i class="fas fa-fw fa-lg fa-times text-secondary"></i>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 1
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-info"></i>
+                    <i class="fas fa-fw fa-lg fa-times text-secondary"></i>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 2
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-info"></i>
+                    <i class="fas fa-fw fa-lg fa-times text-secondary"></i>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 3
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-info"></i>
+                    <i class="fas fa-fw fa-lg fa-times text-secondary"></i>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 4
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-info"></i>
+                    <i class="fas fa-fw fa-lg fa-times text-secondary"></i>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 5
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-info"></i>
+                    <i class="fas fa-fw fa-lg fa-times text-secondary"></i>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 6
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-info"></i>
+                    <i class="fas fa-fw fa-lg fa-times text-secondary"></i>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 7
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-secondary"></i>
+                    <a href="#">
+                      <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                    </a>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 8
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-secondary"></i>
+                    <a href="#">
+                      <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                    </a>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 9
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-secondary"></i>
+                    <a href="#">
+                      <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                    </a>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 10
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-secondary"></i>
+                    <a href="#">
+                      <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                    </a>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 11
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-secondary"></i>
+                    <a href="#">
+                      <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                    </a>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 12
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-secondary"></i>
+                    <a href="#">
+                      <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                    </a>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 13
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-secondary"></i>
+                    <a href="#">
+                      <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                    </a>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 14
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-secondary"></i>
+                    <a href="#">
+                      <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                    </a>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 15
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-secondary"></i>
+                    <a href="#">
+                      <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                    </a>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 16
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-secondary"></i>
+                    <a href="#">
+                      <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                    </a>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 17
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-secondary"></i>
+                    <a href="#">
+                      <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                    </a>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 18
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-secondary"></i>
+                    <a href="#">
+                      <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                    </a>
+                  </span>
+                </li>
+                
+
+              
+
+                
+                <li class="list-group-item">
+                  Nombre de invitado 19
+                  <span class="list-group-option float-right">
+                    <i class="fas fa-fw fa-lg fa-check text-secondary"></i>
+                    <a href="#">
+                      <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                    </a>
+                  </span>
+                </li>
+                
+
+              
+            </ul>
+          </div>
+          <button type="button" name="button" class="btn btn-lg btn-info">
+            Cerrar lista
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container">
+    <div class="text-muted">
+      footer
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" charset="utf-8"></script>
+<!--build:js js/main.min.js -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/sweetalert.min.js"></script>
+<script src="js/main.js"></script>
+<!-- endbuild -->
+
+
+  
+<script type="text/javascript">
+  function validateForm(){
+
+    var title = document.getElementById('title').value.trim();
+
+    if (title === ''){
+      swal(
+        'Oops´...',
+        'Faltan completar campos obligatorios!',
+        'error'    );
+      return false;
+    }else{
+      $('.form-control').val('');
+      swal({
+        title: "Buen trabajo!",
+        text: "Su registro fue creado con éxito!",
+        icon: "success",
+        buttons: "Cerrar!"
+      });
+    }
+  }
+</script>
+
+
+</body>
+</html>

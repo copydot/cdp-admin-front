@@ -1,0 +1,59 @@
+//
+// panel
+
+.panel{
+  //background-color: orange;
+  a{
+    text-decoration: none;
+    border-radius: 5px;
+    color: $gray-700;
+
+    &:hover{
+      background-color: $gray-800;
+      color: white;
+    }
+
+    .card{
+      background-color: transparent;
+      margin-bottom: 30px;
+
+      .card-header,
+      .card-footer{
+        background-color: rgba(#000, 0.2);
+        padding: 2px;
+      }
+      .card-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .card-text{
+          text-transform: uppercase;
+          &.card-month{
+            font-size: 1.2em;
+          }
+          &.card-day{
+            font-size: 2em;
+            font-weight: 600;
+          }
+          &.card-list{
+            font-size: 1.2em;
+          }
+          &.card-title{
+            font-size: 1.4em;
+          }
+        }
+        &.card-body-lg{
+          min-height: 180px;
+        }
+        &.card-body-md{
+          min-height: 160px;
+        }
+        &.card-body-sm{
+          min-height: 120px;
+        }
+      }
+    }
+  }
+}

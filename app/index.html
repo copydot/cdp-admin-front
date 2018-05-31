@@ -6,11 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Admin Frontend v.1.0.0</title>
-  <!--build:css css/main.min.css -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/main.css">
-  <!-- endbuild -->
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+<!--build:css css/main.min.css -->
+<link rel="stylesheet" href="./css/main.css">
+<!-- endbuild -->
+
+
 </head>
 <body class="gg-splash-screen">
 
@@ -26,11 +28,11 @@
           <form>
 
             <div class="form-group">
-              <input type="text" name="username" value="" placeholder="Usuario" class="form-control">
+              <input type="text" name="username" id="username" value="" placeholder="Usuario" class="form-control">
             </div>
 
             <div class="form-group">
-              <input type="password" name="password" value="" placeholder="Password" class="form-control">
+              <input type="password" name="password" id="password" value="" placeholder="Password" class="form-control">
             </div>
 
             <div class="form-group row login-tools">
@@ -50,8 +52,7 @@
                 <button type="button" class="btn btn-block btn-light">Registrarme</button>
               </div>
               <div class="col-6 ">
-                
-                <a href="dashboard.html" class="btn btn-block btn-primary">Ingresar</a>
+                <button type="button" onclick="validateLog();" class="btn btn-block btn-primary">Ingresar</button>
               </div>
             </div>
           </form>
@@ -62,11 +63,36 @@
 </div>
 
 
-  <!--build:js js/main.min.js -->
-  <script src="./js/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  <script src="./js/main.js"></script>
-  <!-- endbuild -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" charset="utf-8"></script>
+<!--build:js js/main.min.js -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/sweetalert.min.js"></script>
+<script src="js/main.js"></script>
+<!-- endbuild -->
+
+
+  
+<script type="text/javascript">
+  function validateLog(){
+
+    var username = document.getElementById('username').value.trim();
+    var password = document.getElementById('password').value.trim();
+
+    if (username === '' || password === ''){
+      swal(
+        'Oops´...',
+        'Debe ingresar usuario y contraseña!',
+        'error'    );
+      return false;
+    }else{
+      $('.form-control').val('');
+      location.href = "dashboard.html";
+    }
+  }
+</script>
+
 
 </body>
 </html>
