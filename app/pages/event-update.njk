@@ -10,45 +10,49 @@
 
     <section>
 
-      <div class="heading heading-sm heading-uppercase bg-primary text-light text-center">
-        Ingrese Nuevo Evento
+      <div class="heading heading-sm text-uppercase">
+        <a href="dashboard.html">EVENTOS /</a> <span class="font-weight-bold">Rodrigo DP & KnowBruo</span>
       </div>
 
       <div class="row ">
 
         <div class="col-12- col-md-8">
 
+          <div class="heading heading-sm text-uppercase border-bottom">
+            Editar evento
+          </div>
+
           <form id="form">
 
             <div class="form-group">
               <label for="">Titulo <span class="text-danger">(*)</span> </label>
-              <input type="text" name="" id="title" value="" class="form-control">
+              <input type="text" name="" id="title" value="Rodrigo DP & KnowBruo" class="form-control">
             </div>
 
             <div class="row">
               <div class="col-12 col-md-4">
                 <div class="form-group">
-                  <label for="">Fecha Evento</label>
-                  <input type="date" name="" value="" class="form-control">
+                  <label for="">Fecha Evento <span class="text-danger">(*)</span></label>
+                  <input type="date" name="" value="2018-06-02" class="form-control">
                 </div>
               </div>
               <div class="col-12 col-md-4">
                 <div class="form-group">
-                  <label for="">Fecha Vencimiento</label>
-                  <input type="date" name="" value="" class="form-control">
+                  <label for="">Hora Evento <span class="text-danger">(*)</span></label>
+                  <input type="time" name="" value="20:00" class="form-control">
                 </div>
               </div>
               <div class="col-12 col-md-4">
                 <div class="form-group">
-                  <label for="">Hora Vencimiento</label>
-                  <input type="time" name="" value="" class="form-control">
+                  <label for="">Fecha Baja</label>
+                  <input type="date" name="" value="2018-06-01" class="form-control">
                 </div>
               </div>
             </div>
 
             <div class="form-group">
               <label for="">Descripción</label>
-              <textarea name="name" rows="8" cols="80" class="form-control"></textarea>
+              <textarea name="name" rows="4" class="form-control">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
             </div>
 
             <div class="text-muted mb-4">
@@ -56,14 +60,14 @@
             </div>
 
             <a href="./dashboard.html" class="btn btn-secondary">Cancelar</a>
-            <button type="button" onclick="validateForm();" class="btn btn-primary btn-lg float-right">Crear evento</button>
+            <button type="button" onclick="validateForm();" class="btn btn-primary btn-lg float-right">Actualizar</button>
 
 
           </form>
 
         </div>
         <div class="col-12 col-md-4">
-          <div class="heading heading-sm">
+          <div class="heading heading-sm text-uppercase border-bottom">
             Próximos eventos
           </div>
           <div class="card mb-4">
@@ -103,7 +107,6 @@
         'error'    );
       return false;
     }else{
-      $('.form-control').val('');
       swal({
         title: "Buen trabajo!",
         text: "Su registro fue creado con éxito!",

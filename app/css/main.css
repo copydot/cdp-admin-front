@@ -104,7 +104,7 @@ ul ol {
   margin-bottom: 0; }
 
 dt {
-  font-weight: 700; }
+  font-weight: 600; }
 
 dd {
   margin-bottom: .5rem;
@@ -429,7 +429,7 @@ kbd {
   kbd kbd {
     padding: 0;
     font-size: 100%;
-    font-weight: 700; }
+    font-weight: 600; }
 
 pre {
   display: block;
@@ -3325,7 +3325,7 @@ input[type="button"].btn-block {
   display: inline-block;
   padding: 0.25em 0.4em;
   font-size: 75%;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
@@ -3432,7 +3432,7 @@ input[type="button"].btn-block {
   color: inherit; }
 
 .alert-link {
-  font-weight: 700; }
+  font-weight: 600; }
 
 .alert-dismissible {
   padding-right: 4rem; }
@@ -3702,7 +3702,7 @@ input[type="button"].btn-block {
 .close {
   float: right;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
@@ -6143,7 +6143,7 @@ button.bg-dark:focus {
   font-weight: 400 !important; }
 
 .font-weight-bold {
-  font-weight: 700 !important; }
+  font-weight: 600 !important; }
 
 .font-italic {
   font-style: italic !important; }
@@ -6335,51 +6335,57 @@ footer {
   color: #555; }
   .heading.heading-lg {
     padding: 40px 0px 16px 0;
-    font-size: 3.2em; }
+    font-size: 2.4em; }
   .heading.heading-md {
     padding: 30px 0px 16px 0;
-    font-size: 2.4em; }
+    font-size: 1.8em; }
   .heading.heading-sm {
     padding: 16px 0px 16px 0;
-    font-size: 1.6em; }
-  .heading.heading-uppercase {
-    text-transform: uppercase; }
-  .heading.heading-border {
+    font-size: 1.2em; }
+  .heading.heading-border-top {
+    border-top: 1px solid #e5e5e5; }
+  .heading.heading-border-bottom {
     border-bottom: 1px solid #e5e5e5; }
 
-.panel a {
+.panel .card-btn {
   text-decoration: none;
-  border-radius: 5px;
   color: #495057; }
-  .panel a:hover {
+  .panel .card-btn:hover {
     background-color: #343a40;
     color: white; }
-  .panel a .card {
-    background-color: transparent;
-    margin-bottom: 30px; }
-    .panel a .card .card-header,
-    .panel a .card .card-footer {
-      background-color: rgba(0, 0, 0, 0.2);
-      padding: 2px; }
-    .panel a .card .card-body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-      .panel a .card .card-body .card-text {
-        text-transform: uppercase; }
-        .panel a .card .card-body .card-text.card-month {
-          font-size: 1.2em; }
-        .panel a .card .card-body .card-text.card-day {
-          font-size: 2em;
-          font-weight: 600; }
-        .panel a .card .card-body .card-text.card-list {
-          font-size: 1.2em; }
-        .panel a .card .card-body .card-text.card-title {
-          font-size: 1.4em; }
-      .panel a .card .card-body.card-body-lg {
-        min-height: 180px; }
-      .panel a .card .card-body.card-body-md {
-        min-height: 160px; }
-      .panel a .card .card-body.card-body-sm {
-        min-height: 120px; }
+
+.panel .card {
+  background-color: transparent;
+  margin-bottom: 30px; }
+  .panel .card .card-header {
+    padding: 3px; }
+  .panel .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; }
+    .panel .card .card-body .card-date {
+      font-size: 1.2em;
+      border-bottom: 1px solid rgba(173, 181, 189, 0.25);
+      padding-bottom: 8px;
+      width: 100%;
+      text-align: center; }
+    .panel .card .card-body .card-title {
+      font-size: 1.4em;
+      line-height: 1.2em;
+      margin: 0px; }
+    .panel .card .card-body .card-list {
+      font-size: 1.2em;
+      margin: 0px;
+      border-top: 1px solid rgba(173, 181, 189, 0.25);
+      padding-top: 8px;
+      width: 100%;
+      text-align: center;
+      color: #6c757d; }
+    .panel .card .card-body.card-body-lg {
+      min-height: 180px; }
+    .panel .card .card-body.card-body-md {
+      min-height: 160px; }
+    .panel .card .card-body.card-body-sm {
+      min-height: 130px; }

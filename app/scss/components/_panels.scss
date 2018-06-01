@@ -3,56 +3,65 @@
 
 .panel{
   //background-color: orange;
-  a{
-    text-decoration: none;
-    border-radius: 5px;
-    color: $gray-700;
 
+  .card-btn{
+    text-decoration: none;
+    //border-radius: 5px;
+    color: $gray-700;
     &:hover{
       background-color: $gray-800;
       color: white;
     }
+  }
 
-    .card{
-      background-color: transparent;
-      margin-bottom: 30px;
+  .card{
+    background-color: transparent;
+    margin-bottom: 30px;
 
-      .card-header,
-      .card-footer{
-        background-color: rgba(#000, 0.2);
-        padding: 2px;
+    .card-header{
+      padding: 3px;
+    }
+
+    .card-body{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+
+      .card-date{
+        font-size: 1.2em;
+        border-bottom: 1px solid rgba($gray-500, 0.25);
+        padding-bottom: 8px;
+        width: 100%;
+        text-align: center;
+        // background-color: green;
       }
-      .card-body{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      .card-title{
+        font-size: 1.4em;
+        line-height: 1.2em;
+        margin: 0px;
+        // background-color: orange;
+      }
+      .card-list{
+        // background-color: red;
+        font-size: 1.2em;
+        margin: 0px;
+        border-top: 1px solid rgba($gray-500, 0.25);
+        padding-top: 8px;
+        width: 100%;
+        text-align: center;
+        color: $gray-600;
+      }
 
-        .card-text{
-          text-transform: uppercase;
-          &.card-month{
-            font-size: 1.2em;
-          }
-          &.card-day{
-            font-size: 2em;
-            font-weight: 600;
-          }
-          &.card-list{
-            font-size: 1.2em;
-          }
-          &.card-title{
-            font-size: 1.4em;
-          }
-        }
-        &.card-body-lg{
-          min-height: 180px;
-        }
-        &.card-body-md{
-          min-height: 160px;
-        }
-        &.card-body-sm{
-          min-height: 120px;
-        }
+      &.card-body-lg{
+        min-height: 180px;
+      }
+      &.card-body-md{
+        min-height: 160px;
+      }
+      &.card-body-sm{
+        min-height: 130px;
       }
     }
   }

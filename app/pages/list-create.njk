@@ -1,0 +1,180 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<div>
+  <div class="container">
+
+    <div class="heading heading-lg heading-border">
+      Listas
+    </div>
+
+    <section>
+
+      <div class="heading heading-sm text-uppercase">
+        <a href="dashboard.html">EVENTOS</a> / <a href="list-view.html">Rodrigo DP & KnowBruo <small class="text-info">09/06/2018</small> / </a> Crear Lista
+      </div>
+
+      <div class="row ">
+
+        <div class="col-12- col-md-8">
+
+          <div class="heading heading-sm text-uppercase border-bottom">
+            Crear lista nueva
+          </div>
+
+          <form id="form">
+
+            <label for="">Seleccione Evento</label>
+            <div class="form-group">
+              <select class="form-control" name="" disabled>
+                <option value="1">De Arco a Arco</option>
+                <option value="2" selected>Rodrigo DP & KnowBruo</option>
+                <option value="3">Mati Chilano b2b Berni Turletti</option>
+              </select>
+            </div>
+
+            <div class="row">
+
+              <div class="col-12 col-md-5">
+                <div class="form-group">
+                  <label for="">Tipo de lista <span class="text-danger">(*)</span></label>
+                  <select class="form-control" name="" id="type">
+                    <option value="">Elija el tipo de lista</option>
+                    <option value="1">Lista de invitados</option>
+                    <option value="2">Lista de cumpleaños</option>
+                    <option value="3">Lista de previa</option>
+                    <option value="4">Lista Vip</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-3">
+                <div class="form-group">
+                  <label for="">N° Invitados <span class="text-danger">(*)</span></label>
+                  <input type="number" name="" id="number" value="50" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-12 col-md-4">
+                <div class="form-group">
+                  <label for="">Fecha de caducidad <span class="text-danger">(*)</span></label>
+                  <input type="date" name="" id="date" value="2018-06-09" class="form-control">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-12 col-md-5">
+                <div class="form-group">
+                  <label for="">Asociar lista a</label>
+
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="group-tab" data-toggle="tab" href="#group" role="tab" aria-controls="group" aria-selected="true">Grupos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="user-tab" data-toggle="tab" href="#user" role="tab" aria-controls="user" aria-selected="false">Usuario</a>
+                    </li>
+                  </ul>
+
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="group" role="tabpanel" aria-labelledby="group-tab">
+                      <div class="card">
+                        <div class="card-body">
+                          {% set items = ['Barras', 'Promotores', 'Djs', 'Otros'] %}
+                          {% for item in items %}
+                          <div class="custom-control custom-checkbox mb-1">
+                            <input type="checkbox" class="custom-control-input" id="customCheck{{ item }}">
+                            <label class="custom-control-label" for="customCheck{{ item }}">{{ item }}</label>
+                          </div>
+                          {% endfor %}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="user" role="tabpanel" aria-labelledby="user-tab">
+                      <div class="input-group mt-4 mb-3">
+                        <input type="text" class="form-control" placeholder="Usuario">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-secondary" type="button"><i class="fas fa-search"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-7">
+                <div class="form-group">
+                  <label for="">Descripción</label>
+                  <textarea name="name" rows="8" cols="80" class="form-control"></textarea>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="text-muted mb-4">
+              <span class="text-danger">(*)</span> Campos obligatorios
+            </div>
+
+            <a href="./list-view.html" class="btn btn-secondary">Cancelar</a>
+            <button type="button" onclick="validateForm();" class="btn btn-info btn-lg float-right">Crear listas</button>
+
+          </form>
+
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="heading heading-sm text-uppercase border-bottom">
+            Próximos eventos
+          </div>
+          <div class="card mb-4">
+            <div class="card-body">
+              <p>JUNIO 2018</p>
+              <h3 class="card-title">SÁBADO 9</h3>
+              <hr>
+              <p><a href="#">Listas creadas</a> <span class="badge badge-success">1</span></p>
+            </div>
+          </div>
+          <div class="card mb-4">
+            <div class="card-body">
+              <p>JUNIO 2018</p>
+              <h3 class="card-title">SÁBADO 15</h3>
+              <hr>
+              <p>Listas creadas <span class="badge badge-secondary">0</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+  function validateForm(){
+
+    var type = document.getElementById('type').value.trim();
+    var number = document.getElementById('number').value.trim();
+    var date = document.getElementById('date').value.trim();
+
+    if (type === '' || number === '' || date === ''){
+      swal(
+        'Oops´...',
+        'Faltan completar campos obligatorios!',
+        'error'    );
+      return false;
+    }else{
+      $('.form-control').val('');
+      swal({
+        title: "Buen trabajo!",
+        text: "Su registro fue creado con éxito!",
+        icon: "success",
+        buttons: "Cerrar!"
+      });
+    }
+  }
+
+</script>
+{% endblock %}

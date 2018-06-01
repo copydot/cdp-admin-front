@@ -4,59 +4,109 @@
 <div>
   <div class="container">
 
-    <div class="heading heading-lg heading-border">
-      Listas
+    <div class="heading heading-lg heading-border-bottom">
+      Invitados
     </div>
 
     <section>
 
-      <div class="heading heading-sm heading-uppercase bg-info text-light text-center">
-       Lista de invitados: Sábado 9 de Junio de 2018
+      <div class="heading heading-sm text-uppercase">
+        <a href="dashboard.html">EVENTOS</a> / <a href="list-view.html">RODRIGO DP & KNOWBRUo <small class="text-info">09/06/2018</small> / </a> Invitados
       </div>
+
       <div class="row ">
 
         <div class="col-12- col-md-4">
-          <div class="heading heading-sm">
-            Buscar Personas
+          <div class="heading heading-sm text-uppercase border-bottom">
+            Buscar personas
           </div>
           <form >
             <div class="input-group mb-4">
               <input type="text" class="form-control" placeholder="Ingrese el Nombre o DNI" aria-label="Recipient's username" aria-describedby="basic-addon2">
               <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Buscar</button>
+                <button class="btn btn-outline-secondary" type="button" id="search">Buscar</button>
               </div>
             </div>
-            <hr class="mb-4">
-            <h4>Nombre y Apellido</h4>
-            <p>
-              DNI: 123456789 <br>
-              EMAIL: mail@mail.com
-            </p>
-            <button type="button" name="button" class="btn btn-lg btn-block btn-info">
-              AGREGAR A LA LISTA <i class="fas fa-fw fa-angle-right"></i>
-            </button>
-            <hr class="mb-4">
-            <h5 class="text-danger">Persona no encontrada</h5>
-            <button type="button" name="button" class="btn btn-lg btn-block btn-info">
-              AGREGAR NUEVA PERSONA <i class="fas fa-fw fa-plus"></i>
-            </button>
-            <div class="mt-5">
-              <a href="list-view.html" class="btn btn-info"><i class="fas fa-angle-left"></i> volver</a>
-            </div>
           </form>
+
+          <div class="mb-4" id="spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+          </div>
+
+          <div class="card mb-4" id="people">
+            <div class="card-body p-0">
+              <div class="card-header">
+                Datos de la persona
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Nombre: <span class="font-weight-bold text-info">Juan Pérez</span> </li>
+                <li class="list-group-item">DNI: <span class="font-weight-bold text-info">123456789</span> </li>
+                <li class="list-group-item">Email: <span class="font-weight-bold text-info">jperez@mail.com</span> </li>
+              </ul>
+            </div>
+          </div>
+
+          <button type="button" name="button" class="btn btn-lg btn-danger" id="cancel">
+            Cancelar <i class="fas fa-fw fa-times"></i>
+          </button>
+          <button type="button" name="button" class="btn btn-lg btn-info" id="add">
+            Agregar <i class="fas fa-fw fa-angle-right"></i>
+          </button>
+          <hr class="mb-4">
+
+          <div class="heading heading-sm text-uppercase border-bottom">
+            Crear persona
+          </div>
+
+          <form>
+            <div class="card mb-3">
+              <div class="card-body">
+
+                <div class="form-group">
+                  <label for="">Nombre y Apellido <span class="text-danger">(*)</span></label>
+                  <input type="text" name="" id="name" value="" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label for="">DNI <span class="text-danger">(*)</span></label>
+                  <input type="text" name="" id="dni" value="" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label for="">Email <span class="text-danger">(*)</span></label>
+                  <input type="text" name="" id="email" value="" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label for="">Fecha Nacimiento <span class="text-danger">(*)</span></label>
+                  <input type="date" name="" id="date" value="" class="form-control">
+                </div>
+
+              </div>
+            </div>
+
+            <div class="text-muted mb-4">
+              <span class="text-danger">(*)</span> Campos obligatorios
+            </div>
+
+            <button type="button" onclick="validateForm();" name="button" class="btn btn-lg btn-info mb-3" id="create">
+              Crear y Agregar <i class="fas fa-fw fa-angle-right"></i>
+            </button>
+          </form>
+
         </div>
         <div class="col-12 col-md-8">
 
-          <div class="heading heading-sm">
-            Lista de Invitados
+          <div class="heading heading-sm text-uppercase border-bottom">
+            Lista de invitados
           </div>
 
           <div class="card mb-5">
 
             <ul class="list-group list-group-flush">
-              {% for i in range(0, 20) %}
+              {% for i in range(1, 10) %}
 
-                {% if i < 7 %}
+                {% if i < 4 %}
                 <li class="list-group-item">
                   Nombre de invitado {{ i }}
                   <span class="list-group-option float-right">
@@ -77,9 +127,18 @@
                 {% endif %}
 
               {% endfor %}
+              <li class="list-group-item" id="invitado">
+                Juan Pérez <span class="bg-success font-weight-bold text-white pl-2 pr-2 pb-1 ml-2">nuevo</span>
+                <span class="list-group-option float-right">
+                  <i class="fas fa-fw fa-lg fa-check text-secondary"></i>
+                  <a href="javascript:;" id="delete">
+                    <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                  </a>
+                </span>
+              </li>
             </ul>
           </div>
-          <button type="button" name="button" class="btn btn-lg btn-info">
+          <button type="button" name="button" class="btn btn-lg btn-info" >
             Cerrar lista
           </button>
         </div>
@@ -92,25 +151,70 @@
 
 {% block js %}
 <script type="text/javascript">
+
   function validateForm(){
 
-    var title = document.getElementById('title').value.trim();
+    var name = document.getElementById('name').value.trim();
+    var dni = document.getElementById('dni').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var date = document.getElementById('date').value.trim();
 
-    if (title === ''){
+    if (name === '' || dni === '' || email === '' || date === ''){
       swal(
         'Oops´...',
         'Faltan completar campos obligatorios!',
         'error'    );
       return false;
     }else{
-      $('.form-control').val('');
+      $('#invitado').hide();
       swal({
         title: "Buen trabajo!",
         text: "Su registro fue creado con éxito!",
         icon: "success",
         buttons: "Cerrar!"
       });
+      $('.form-control').val('');
+      $('#invitado').show();
+      // $('#invitado').delay(4000).fadeOut();
     }
   }
+
+  $("#spinner").hide();
+  $("#people").hide();
+  $('#invitado').hide();
+  $('#cancel').hide();
+
+  $("#cancel").click(function(){
+    $("#people").hide();
+    $('#cancel').hide();
+  });
+
+  $("#delete").click(function(){
+    $("#invitado").hide();
+  });
+
+  $("#search").click(function(){
+    $('.form-control').val('');
+    $("#people").hide();
+    // $('#invitado').hide();
+    $("#spinner").show();
+    $("#spinner").delay("fast").hide(100);
+    $("#people").delay("fast").show(200);
+    $('#cancel').delay("fast").show(200);
+  });
+
+  $("#add").click(function(){
+    swal({
+      title: "Buen trabajo!",
+      text: "La persona fue agregada a la lista de invitados!",
+      icon: "success",
+      buttons: "Cerrar!"
+    });
+    $('.form-control').val('');
+    $('#cancel').hide();
+    $("#people").hide();
+    $('#invitado').show();
+    // $('#invitado').delay(4000).fadeOut();
+  });
 </script>
 {% endblock %}
