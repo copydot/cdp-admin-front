@@ -8,9 +8,7 @@
   <title>Admin Frontend v.1.0.0</title>
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-<!--build:css css/main.min.css -->
-<link rel="stylesheet" href="./css/main.css">
-<!-- endbuild -->
+<link rel="stylesheet" href="css/main.min.css">
 
 
 </head>
@@ -72,7 +70,7 @@
     <section>
 
       <div class="heading heading-sm text-uppercase">
-        <a href="dashboard.html">EVENTOS /</a> <span class="font-weight-bold">Rodrigo DP & KnowBruo</span>
+        <a href="dashboard.html">EVENTOS /</a> Create
       </div>
 
       <div class="row ">
@@ -80,40 +78,40 @@
         <div class="col-12- col-md-8">
 
           <div class="heading heading-sm text-uppercase border-bottom">
-            Editar evento
+            Crear evento nuevo
           </div>
 
           <form id="form">
 
             <div class="form-group">
               <label for="">Titulo <span class="text-danger">(*)</span> </label>
-              <input type="text" name="" id="title" value="Rodrigo DP & KnowBruo" class="form-control">
+              <input type="text" name="" id="title" value="" class="form-control">
             </div>
 
             <div class="row">
               <div class="col-12 col-md-4">
                 <div class="form-group">
                   <label for="">Fecha Evento <span class="text-danger">(*)</span></label>
-                  <input type="date" name="" value="2018-06-02" class="form-control">
+                  <input type="date" name="" id="date" value="" class="form-control">
                 </div>
               </div>
               <div class="col-12 col-md-4">
                 <div class="form-group">
-                  <label for="">Hora Evento <span class="text-danger">(*)</span></label>
-                  <input type="time" name="" value="20:00" class="form-control">
+                  <label for="">Hora Evento</label>
+                  <input type="time" name="" value="" class="form-control">
                 </div>
               </div>
               <div class="col-12 col-md-4">
                 <div class="form-group">
                   <label for="">Fecha Baja</label>
-                  <input type="date" name="" value="2018-06-01" class="form-control">
+                  <input type="date" name="" value="" class="form-control">
                 </div>
               </div>
             </div>
 
             <div class="form-group">
               <label for="">Descripción</label>
-              <textarea name="name" rows="4" class="form-control">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+              <textarea name="name" rows="4" class="form-control"></textarea>
             </div>
 
             <div class="text-muted mb-4">
@@ -121,7 +119,7 @@
             </div>
 
             <a href="./dashboard.html" class="btn btn-secondary">Cancelar</a>
-            <button type="button" onclick="validateForm();" class="btn btn-primary btn-lg float-right">Actualizar</button>
+            <button type="button" onclick="validateForm();" class="btn btn-primary btn-lg float-right">Crear</button>
 
 
           </form>
@@ -165,13 +163,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" charset="utf-8"></script>
-<!--build:js js/main.min.js -->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/sweetalert.min.js"></script>
-<script src="js/main.js"></script>
-<!-- endbuild -->
+<script src="js/main.min.js"></script>
 
 
   
@@ -179,14 +171,16 @@
   function validateForm(){
 
     var title = document.getElementById('title').value.trim();
+    var date = document.getElementById('date').value.trim();
 
-    if (title === ''){
+    if (title === '' || date === ''){
       swal(
         'Oops´...',
         'Faltan completar campos obligatorios!',
         'error'    );
       return false;
     }else{
+      $('.form-control').val('');
       swal({
         title: "Buen trabajo!",
         text: "Su registro fue creado con éxito!",

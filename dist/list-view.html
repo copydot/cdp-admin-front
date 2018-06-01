@@ -1,0 +1,156 @@
+<!-- layout.njk -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Admin Frontend v.1.0.0</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+<link rel="stylesheet" href="css/main.min.css">
+
+
+</head>
+<body>
+
+  <!-- src/templates/partials/navigation.njk -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="./dashboard.html">ADMINISTRADOR</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard.html">Eventos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="list-view.html">Listas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Personas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Usuarios</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Notificaciones <span class="badge badge-danger text-light">3</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Username <i class="fas fa-fw fa-user-circle"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Cuenta <i class="fas fa-fw fa-user"></i></a>
+            <a class="dropdown-item" href="#">Configuración <i class="fas fa-fw fa-cog"></i></a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="./">Cerrar Session <i class="fas fa-fw fa-sign-out-alt"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  
+<div>
+  <div class="container">
+
+    <div class="heading heading-lg heading-border-bottom">
+      Listas
+    </div>
+
+    <section class="panel">
+
+      <div class="heading heading-sm text-uppercase">
+        <a href="dashboard.html">EVENTOS /</a> RODRIGO DP & KNOWBRUo <small class="text-info">09/06/2018</small> /
+      </div>
+
+      <div class="row ">
+
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <div class="card">
+            <div class="card-header bg-info"></div>
+            <a href="list-guests.html" class="card-btn">
+              <div class="card-body card-body-sm">
+                <div class="card-date"></div>
+                <div class="card-title font-weight-bold text-uppercase text-center">Invitados</div>
+                <div class="card-list">
+                  Invitados <span class="badge badge-info">20</span>
+                </div>
+              </div>
+            </a>
+            <div class="card-footer bg-info text-center text-light">
+              <a href="list-update.html" class="text-white">editar lista</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <div class="card">
+            <div class="card-header bg-info"></div>
+            <a href="list-guests.html" class="card-btn">
+              <div class="card-body card-body-sm">
+                <div class="card-date"></div>
+                <div class="card-title font-weight-bold text-uppercase text-center">Previa</div>
+                <div class="card-list">
+                  Invitados <span class="badge badge-info">20</span>
+                </div>
+              </div>
+            </a>
+            <div class="card-footer bg-info text-center text-light">
+              <a href="list-update.html" class="text-white">editar lista</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+          <div class="card bg-info text-white">
+            <div class="card-header"></div>
+            <a href="list-create.html" class="btn-block">
+              <div class="card-body card-body-sm">
+                <div class=""></div>
+                <div class="text-white">
+                  <i class="fas fa-3x fa-plus"></i>
+                </div>
+                <div class=""></div>
+              </div>
+            </a>
+            <div class="card-footer text-center">
+              crear lista
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container">
+    <div class="text-muted">
+      footer
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" charset="utf-8"></script>
+<script src="js/main.min.js"></script>
+
+
+  
+
+</body>
+</html>
