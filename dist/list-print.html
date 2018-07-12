@@ -1,0 +1,933 @@
+<!-- layout.njk -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Admin Frontend v.1.0.0</title>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+<link rel="stylesheet" href="css/main.min.css">
+
+
+</head>
+<body>
+
+  <!-- src/templates/partials/navigation.njk -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="./dashboard.html">ADMINISTRADOR</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard.html">Eventos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="list-view.html">Listas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Personas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Usuarios</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Notificaciones <span class="badge badge-danger text-light">3</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Username <i class="fas fa-fw fa-user-circle"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Cuenta <i class="fas fa-fw fa-user"></i></a>
+            <a class="dropdown-item" href="#">Configuración <i class="fas fa-fw fa-cog"></i></a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="./">Cerrar Session <i class="fas fa-fw fa-sign-out-alt"></i></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  
+<div>
+  <div class="container print">
+
+    <div class="heading heading-lg heading-border-bottom">
+      Invitados
+    </div>
+
+    <section>
+
+      <div class="heading heading-sm text-uppercase">
+        <a href="dashboard.html">EVENTOS</a> / <a href="list-view.html">RODRIGO DP & KNOWBRUo <small class="text-dark">09/06/2018</small> / </a> Invitados
+      </div>
+
+		  <div class="media border border-dark mb-4">
+        <div class="p-4 mr-3 border border-right">
+          <i class="fas fa-fw fa-5x fa-birthday-cake"></i>
+        </div>
+        <div class="media-body py-2">
+          <div class="">09/06/2018 | RODRIGO DP & KNOWBRUo</div>
+          <h3 class="text-uppercase my-0 py-2 ">Lista de cumpleaños</h3>
+          <h5 class="font-weight-bold text-dark text-uppercase ">Owner de la lista</h5>
+        </div>
+      </div>
+
+      <div class="row ">
+
+        <div class="col-12">
+
+          <table class="table table-bordered table-sm mb-5">
+            <thead>
+              <tr>
+                <th scope="col" width="200">DNI</th>
+                <th scope="col">Nombre y Apellido</th>
+                <th scope="col" width="150">Sexo</th>
+                <th scope="col" width="50">Asis.</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 1
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 2
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 3
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 4
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 5
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 6
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 7
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 8
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 9
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 10
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 11
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 12
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 13
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 14
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 15
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 16
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 17
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 18
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 19
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 20
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 21
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 22
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 23
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 24
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 25
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 26
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 27
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 28
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 29
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 30
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 31
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 32
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 33
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 34
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 35
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 36
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 37
+                  </td>
+                  <td>
+                    
+                      Femenino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 38
+                  </td>
+                  <td>
+                    
+                      Masculino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 39
+                  </td>
+                  <td>
+                    
+                      Masculino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 40
+                  </td>
+                  <td>
+                    
+                      Masculino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 41
+                  </td>
+                  <td>
+                    
+                      Masculino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 42
+                  </td>
+                  <td>
+                    
+                      Masculino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 43
+                  </td>
+                  <td>
+                    
+                      Masculino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 44
+                  </td>
+                  <td>
+                    
+                      Masculino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 45
+                  </td>
+                  <td>
+                    
+                      Masculino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 46
+                  </td>
+                  <td>
+                    
+                      Masculino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 47
+                  </td>
+                  <td>
+                    
+                      Masculino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 48
+                  </td>
+                  <td>
+                    
+                      Masculino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado 49
+                  </td>
+                  <td>
+                    
+                      Masculino
+                    
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              
+
+            </tbody>
+
+          </table>
+
+          <div class="p-5 text-center border border-dark mb-5">
+            <h1>CAMPOS PARA COMPLETAR</h1>
+          </div>
+
+          <a href="list-guests.html" class="btn btn-lg btn-info">Volver</a>
+          <a href="#" onclick="printList()"  class="btn btn-lg btn-info float-right">Imprimir lista</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container">
+    <div class="text-muted">
+      footer
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" charset="utf-8"></script>
+<script src="js/main.min.js"></script>
+
+
+  
+<script type="text/javascript">
+
+  $(document).ready(function() {
+    window.print();
+  });
+
+  function printList() {
+      window.print();
+  }
+
+</script>
+
+
+</body>
+</html>
