@@ -1,0 +1,92 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<div>
+  <div class="container print">
+
+    <div class="heading heading-lg heading-border-bottom">
+      Invitados
+    </div>
+
+    <section>
+
+      <div class="heading heading-sm text-uppercase">
+        <a href="dashboard.html">EVENTOS</a> / <a href="list-view.html">RODRIGO DP & KNOWBRUo <small class="text-dark">09/06/2018</small> / </a> Invitados
+      </div>
+
+		  <div class="media border border-dark mb-4">
+        <div class="p-4 mr-3 border border-right">
+          <i class="fas fa-fw fa-5x fa-birthday-cake"></i>
+        </div>
+        <div class="media-body py-2">
+          <div class="">09/06/2018 | RODRIGO DP & KNOWBRUo</div>
+          <h3 class="text-uppercase my-0 py-2 ">Lista de cumpleaños</h3>
+          <h5 class="font-weight-bold text-dark text-uppercase ">Owner de la lista</h5>
+        </div>
+      </div>
+
+      <div class="row ">
+
+        <div class="col-12">
+
+          <table class="table table-bordered table-sm mb-5">
+            <thead>
+              <tr>
+                <th scope="col" width="200">DNI</th>
+                <th scope="col">Nombre y Apellido</th>
+                <th scope="col" width="150">Sexo</th>
+                <th scope="col" width="50">Asis.</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in range(1, 50) %}
+                <tr>
+                  <td>
+                    123456789
+                  </td>
+                  <td>
+                    Nombre de invitado {{ i }}
+                  </td>
+                  <td>
+                    {% if i < '38' %}
+                      Femenino
+                    {% else %}
+                      Masculino
+                    {% endif %}
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              {% endfor %}
+
+            </tbody>
+
+          </table>
+
+          <div class="p-5 text-center border border-dark mb-5">
+            <h1>CAMPOS PARA COMPLETAR</h1>
+          </div>
+
+          <a href="list-guests.html" class="btn btn-lg btn-info">Volver</a>
+          <a href="#" onclick="printList()"  class="btn btn-lg btn-info float-right">Imprimir lista</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+
+  $(document).ready(function() {
+    window.print();
+  });
+
+  function printList() {
+      window.print();
+  }
+
+</script>
+{% endblock %}

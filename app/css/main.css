@@ -6389,3 +6389,19 @@ footer {
       min-height: 160px; }
     .panel .card .card-body.card-body-sm {
       min-height: 130px; }
+
+.print .table {
+  font-size: 1.4em; }
+  .print .table tr th,
+  .print .table tr td {
+    border-color: #000; }
+
+@media print {
+  .container {
+    width: auto; }
+  .heading {
+    display: none; }
+  .btn {
+    display: none; }
+  footer {
+    display: none; } }

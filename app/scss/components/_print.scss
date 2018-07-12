@@ -1,0 +1,30 @@
+//
+//
+
+.print{
+	.table{
+		font-size: 1.4em;
+		tr{
+			th,
+			td{
+				border-color: #000;
+			}
+		}
+	}
+
+}
+
+@media print {
+  .container {
+    width: auto;
+  }
+	.heading{
+		display: none;
+	}
+	.btn{
+		display: none;
+	}
+	footer{
+		display: none
+	}
+}
