@@ -98,120 +98,72 @@
         <div class="col-12 col-md-8">
 
           <div class="heading heading-sm text-uppercase border-bottom">
-            Tipo de lista
+            Lista de invitados
           </div>
 
           <div class="media border border-info mb-4">
             <div class="bg-info text-white p-4 mr-3">
-              <i class="fas fa-fw fa-5x fa-users"></i>
+              <i class="fas fa-fw fa-5x fa-glass-martini-alt"></i>
             </div>
             <div class="media-body py-2">
-              <div class="">09/06/2018 | RODRIGO DP & KNOWBRUo</div>
-              <h3 class="text-uppercase my-0 py-2 text-info">Lista de invitados</h3>
-              <h5 class="font-weight-bold text-uppercase ">Owner de la lista</h5>
-            </div>
-          </div>
-
-            <div class="media border border-info mb-4">
-              <div class="bg-info text-white p-4 mr-3">
-                <i class="fas fa-fw fa-5x fa-birthday-cake"></i>
-              </div>
-              <div class="media-body py-2">
-                <div class="">09/06/2018 | RODRIGO DP & KNOWBRUo</div>
-                <h3 class="text-uppercase my-0 py-2 text-info ">Lista de cumpleaños</h3>
-                <h5 class="font-weight-bold text-uppercase ">Owner de la lista</h5>
-              </div>
-            </div>
-
-            <div class="media border border-info mb-4">
-              <div class="bg-info text-white p-4 mr-3">
-                <i class="fas fa-fw fa-5x fa-glass-martini-alt"></i>
-              </div>
-              <div class="media-body py-2">
-                <div class="">09/06/2018 | RODRIGO DP & KNOWBRUo</div>
-                <h3 class="text-uppercase my-0 py-2 text-info ">Lista de previa</h3>
-                <h5 class="font-weight-bold text-uppercase ">Owner de la lista</h5>
-              </div>
-            </div>
-
-            <div class="media border border-info mb-4">
-              <div class="bg-info text-white p-4 mr-3">
-                <i class="fas fa-fw fa-5x fa-couch"></i>
-              </div>
-              <div class="media-body py-2">
-                <div class="">09/06/2018 | RODRIGO DP & KNOWBRUo</div>
-                <h3 class="text-uppercase my-0 py-2 text-info ">Lista Vip</h3>
-                <h5 class="font-weight-bold text-uppercase ">Owner de la lista</h5>
-              </div>
-            </div>
-
-          <div class="card mb-5">
-
-            <div class="card-header">
               <div class="row">
-                <div class="col-2">
-                  DNI
+                <div class="col-8">
+                  <div class="">09/06/2018 | RODRIGO DP & KNOWBRUo</div>
+                  <h3 class="text-uppercase my-0 py-2 text-info ">Lista de Previas</h3>
+                  <h5 class="font-weight-bold text-uppercase ">Owner de la lista</h5>
                 </div>
-                <div class="col-5">
-                  Invitado
-                </div>
-                <div class="col-3">
-                  Usuario
-                </div>
-                <div class="col-2 text-right">
-                  Eliminar
+                <div class="col-4 text-right pr-4">
+                  <div class="countdown">
+                    Cierre de lista!
+                    <h5 id="clock"></h5>
+                  </div>
+                  <div class="">
+                    Invitados
+                    <h5>150/200</h5>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <ul class="list-group list-group-flush">
-              {% for i in range(1, 10) %}
-
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col-2">
-                    123456789
-                  </div>
-                  <div class="col-5">
-                    Nombre de invitado {{ i }}
-                  </div>
-                  <div class="col-3">
-                    Usuario que invito
-                  </div>
-                  <div class="col-2 text-right">
-                    <a href="#">
-                      <i class="fas fa-fw fa-lg fa-times text-danger"></i>
-                    </a>
-                  </div>
-                </div>
-              </li>
-
-              {% endfor %}
-              <li class="list-group-item" id="invitado">
-                <div class="row">
-                  <div class="col-2">
-                    123456789
-                  </div>
-                  <div class="col-5">
-                    Nombre de invitado {{ i }} <span class="bg-success font-weight-bold text-white pl-2 pr-2 pb-1 ml-2">nuevo</span>
-                  </div>
-                  <div class="col-3">
-                    Usuario que invito
-                  </div>
-                  <div class="col-2 text-right">
-                    <i class="fas fa-fw fa-lg fa-check text-secondary"></i>
-                    <a href="#">
-                      <i class="fas fa-fw fa-lg fa-times text-danger"></i>
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
           </div>
-          <button type="button" name="button" class="btn btn-lg btn-info" >
-            Cerrar lista
-          </button>
-          <a href="list-print.html" class="btn btn-lg btn-light float-right">Imprimir Lista</a>
+
+          <table id="example" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+              <tr>
+                <th>DNI</th>
+                <th>Invitado</th>
+                <th>Sexo</th>
+                <th>Usuario</th>
+                <th>Ac</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for i in range(1, 151) %}
+              <tr>
+                <td>{{ i }}12345678</td>
+                <td>invitado{{ i }}</td>
+                <td>
+                  {% if i < '90' %}
+                    FE
+                  {% else %}
+                    MA
+                  {% endif %}</td>
+                <td>usuario{{ i }}</td>
+                <td>
+                  <a href="#">
+                    <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                  </a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+          <div class="mt-5">
+            <button type="button" name="button" class="btn btn-lg btn-info" id="btn-close-list">
+              Cerrar lista
+            </button>
+            <a href="list-print.html" class="btn btn-lg btn-light float-right" id="btn-print-list">Imprimir Lista</a>
+          </div>
+
         </div>
       </div>
     </section>
@@ -287,5 +239,74 @@
     $('#invitado').show();
     // $('#invitado').delay(4000).fadeOut();
   });
+
+
+  // datatables
+  $(document).ready(function() {
+    $('#example').DataTable({
+      "order": [[ 2, "asc" ]],
+      "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+      "language": {
+          "lengthMenu": "Mostrar _MENU_ registros",
+          "search": "Buscar:",
+          "zeroRecords":    "No se encontraron registros coincidentes",
+          "info": "Mostrando pagina _PAGE_ de _PAGES_",
+          "infoEmpty": "No hay registros disponibles",
+          "infoFiltered": "(filtrado de _MAX_ registros totales)",
+      "paginate": {
+          "first":      "Primera",
+          "last":       "Ultima",
+          "next":       "Proxima",
+          "previous":   "Anterior"
+      },
+
+      }
+    });
+
+
+    // countdown
+    $('#btn-print-list').addClass('disabled');
+
+    // temporal para obtener la fecha y hora actual y agregarle un minuto mas para testaer
+    var tiempo = new Date();
+    var date = tiempo.getDate();
+    var month = tiempo.getMonth()+1;
+    var year = tiempo.getFullYear();
+    var hora = tiempo.getHours();
+    var minuto = tiempo.getMinutes()+1;
+    var segundo = tiempo.getSeconds();
+
+    var fecha = year + '/' + month + '/' + date;
+    var tiempo = hora + ':' + minuto + ':' + segundo;
+
+    var limite = fecha + ' ' + tiempo;
+    // fin temporal
+
+    $('#clock').countdown(limite) // pasar fecha y hora de cierre de la lista
+    .on('update.countdown', function(event) {
+      var format = '%H:%M:%S';
+      if(event.offset.totalDays > 0) {
+        format = '%-d dia%!d ' + format;
+      }
+      if(event.offset.weeks > 0) {
+        format = '%-w semana%!w ' + format;
+      }
+      $(this).html(event.strftime(format));
+    })
+    .on('finish.countdown', function(event) {
+      $(this).html('<span class="text-danger">Lista cerrada!</span>')
+        .parent().addClass('disabled');
+      $('#btn-close-list').addClass('disabled');
+      $('#btn-close-list').addClass('disabled');
+      $('#btn-close-list').addClass('disabled');
+      $('#btn-close-list').removeClass('btn-info');
+      $('#btn-close-list').addClass('btn-light');
+
+      $('#btn-print-list').removeClass('disabled');
+      $('#btn-print-list').removeClass('btn-light');
+      $('#btn-print-list').addClass('btn-info');
+    });
+
+} );
 </script>
 {% endblock %}
