@@ -6390,6 +6390,21 @@ footer {
     .panel .card .card-body.card-body-sm {
       min-height: 130px; }
 
+.dt-bootstrap4 {
+  padding-bottom: 15px; }
+
+.dataTables_length {
+  margin-bottom: 0px; }
+
+.dataTables_filter {
+  margin-bottom: 0px; }
+
+.dataTables_info {
+  margin-top: 10px; }
+
+.dataTables_paginate .paginate_button {
+  margin-top: 10px; }
+
 .print .table {
   font-size: 1.4em; }
   .print .table tr th,
@@ -6401,6 +6416,8 @@ footer {
     width: auto; }
   .heading {
     display: none; }
+  .salto {
+    page-break-before: always; }
   .btn {
     display: none; }
   footer {

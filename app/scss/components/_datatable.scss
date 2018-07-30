@@ -1,0 +1,40 @@
+//
+// datatable
+
+.dataTables_wrapper{
+	// background-color: orange;
+}
+
+.dt-bootstrap4{
+	// background-color: yellow;
+	padding-bottom: 15px;
+}
+
+// rows per pages
+.dataTables_length{
+	// background-color: red;
+	margin-bottom: 0px;
+}
+
+//search
+.dataTables_filter{
+	// background-color: blue;
+	margin-bottom: 0px;
+}
+
+// table
+.dataTable{
+	// background-color: green;
+}
+
+// info pages
+.dataTables_info{
+	margin-top: 10px;
+}
+
+// pagination
+.dataTables_paginate{
+	.paginate_button{
+		margin-top: 10px;
+	}
+}

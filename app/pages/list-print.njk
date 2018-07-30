@@ -16,11 +16,11 @@
 
 		  <div class="media border border-dark mb-4">
         <div class="p-4 mr-3 border border-right">
-          <i class="fas fa-fw fa-5x fa-birthday-cake"></i>
+          <i class="fas fa-fw fa-5x fa-glass-martini-alt"></i>
         </div>
         <div class="media-body py-2">
           <div class="">09/06/2018 | RODRIGO DP & KNOWBRUo</div>
-          <h3 class="text-uppercase my-0 py-2 ">Lista de cumpleaños</h3>
+          <h3 class="text-uppercase my-0 py-2 ">Lista de Previas</h3>
           <h5 class="font-weight-bold text-dark text-uppercase ">Owner de la lista</h5>
         </div>
       </div>
@@ -29,33 +29,44 @@
 
         <div class="col-12">
 
+          <h1 class="text-uppercase py-3">Mujeres</h1>
           <table class="table table-bordered table-sm mb-5">
+            <caption>Fin lista mujeres</caption>
             <thead>
               <tr>
-                <th scope="col" width="200">DNI</th>
-                <th scope="col">Nombre y Apellido</th>
-                <th scope="col" width="150">Sexo</th>
-                <th scope="col" width="50">Asis.</th>
+                <th scope="col">DNI</th>
+                <th scope="col">Invitado</th>
+                <th scope="col">Usuario</th>
+                <th scope="col">Sex</th>
+                <th scope="col" width="50">Ctrl</th>
               </tr>
             </thead>
             <tbody>
-              {% for i in range(1, 50) %}
+            {% for i in range(1, 200) %}
+            {% if i == 90 %}
+            </tbody>
+            </table>
+            <div class="salto"></div>
+            <h1 class="text-uppercase py-3">Hombres</h1>
+            <table class="table table-bordered table-sm mb-5">
+              <caption>Fin lista hombres</caption>
+              <thead>
                 <tr>
-                  <td>
-                    123456789
-                  </td>
-                  <td>
-                    Nombre de invitado {{ i }}
-                  </td>
-                  <td>
-                    {% if i < '38' %}
-                      Femenino
-                    {% else %}
-                      Masculino
-                    {% endif %}
-                  </td>
-                  <td>
-                  </td>
+                  <th scope="col">DNI</th>
+                  <th scope="col">Invitado</th>
+                  <th scope="col">Usuario</th>
+                  <th scope="col">Sex</th>
+                  <th scope="col" width="50">Ctrl</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% endif %}
+                <tr>
+                  <td>{{ i }}12345678</td>
+                  <td>invitado{{ i }}</td>
+                  <td>usuario{{ i }}</td>
+                  <td>{% if i < 90 %}F{% else %}M{% endif %}</td>
+                  <td></td>
                 </tr>
               {% endfor %}
 

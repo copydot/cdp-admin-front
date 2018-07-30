@@ -126,12 +126,11 @@
             </div>
           </div>
 
-          <table id="example" class="table table-striped table-bordered" style="width:100%">
+          <table id="datatable" class="table table-striped table-bordered" style="width:100%">
             <thead>
               <tr>
                 <th>DNI</th>
                 <th>Invitado</th>
-                <th>Sexo</th>
                 <th>Usuario</th>
                 <th>Ac</th>
               </tr>
@@ -140,13 +139,7 @@
               {% for i in range(1, 151) %}
               <tr>
                 <td>{{ i }}12345678</td>
-                <td>invitado{{ i }}</td>
-                <td>
-                  {% if i < '90' %}
-                    FE
-                  {% else %}
-                    MA
-                  {% endif %}</td>
+                <td>invitado{{ i }}</td>                
                 <td>usuario{{ i }}</td>
                 <td>
                   <a href="#">
@@ -157,7 +150,9 @@
             </tbody>
           </table>
 
-          <div class="mt-5">
+          <hr>
+
+          <div>
             <button type="button" name="button" class="btn btn-lg btn-info" id="btn-close-list">
               Cerrar lista
             </button>
@@ -243,11 +238,11 @@
 
   // datatables
   $(document).ready(function() {
-    $('#example').DataTable({
+    $('#datatable').DataTable({
       "order": [[ 2, "asc" ]],
       "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
       "language": {
-          "lengthMenu": "Mostrar _MENU_ registros",
+          "lengthMenu": "Mostrar _MENU_ registros por página",
           "search": "Buscar:",
           "zeroRecords":    "No se encontraron registros coincidentes",
           "info": "Mostrando pagina _PAGE_ de _PAGES_",
