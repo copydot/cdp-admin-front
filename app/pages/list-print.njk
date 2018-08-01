@@ -14,20 +14,20 @@
         <a href="dashboard.html">EVENTOS</a> / <a href="list-view.html">RODRIGO DP & KNOWBRUo <small class="text-dark">09/06/2018</small> / </a> Invitados
       </div>
 
-		  <div class="media border border-dark mb-4">
-        <div class="p-4 mr-3 border border-right">
-          <i class="fas fa-fw fa-5x fa-glass-martini-alt"></i>
-        </div>
-        <div class="media-body py-2">
-          <div class="">09/06/2018 | RODRIGO DP & KNOWBRUo</div>
-          <h3 class="text-uppercase my-0 py-2 ">Lista de Previas</h3>
-          <h5 class="font-weight-bold text-dark text-uppercase ">Owner de la lista</h5>
-        </div>
-      </div>
-
       <div class="row ">
 
         <div class="col-12">
+
+          <div class="media border border-dark mb-4">
+            <div class="p-4 mr-3 border border-right">
+              <i class="fas fa-fw fa-5x fa-glass-martini-alt"></i>
+            </div>
+            <div class="media-body py-2">
+              <div class="">09/06/2018 | RODRIGO DP & KNOWBRUo</div>
+              <h3 class="text-uppercase my-0 py-2 ">Lista de Previas</h3>
+              <h5 class="font-weight-bold text-dark text-uppercase ">Owner de la lista</h5>
+            </div>
+          </div>
 
           <h1 class="text-uppercase py-3">Mujeres</h1>
           <table class="table table-bordered table-sm mb-5">
@@ -42,11 +42,22 @@
               </tr>
             </thead>
             <tbody>
-            {% for i in range(1, 200) %}
+            {% for i in range(1, 180) %}
             {% if i == 90 %}
             </tbody>
             </table>
             <div class="salto"></div>
+            <hr class="my-5">
+            <div class="media border border-dark mb-4">
+              <div class="p-4 mr-3 border border-right">
+                <i class="fas fa-fw fa-5x fa-glass-martini-alt"></i>
+              </div>
+              <div class="media-body py-2">
+                <div class="">09/06/2018 | RODRIGO DP & KNOWBRUo</div>
+                <h3 class="text-uppercase my-0 py-2 ">Lista de Previas</h3>
+                <h5 class="font-weight-bold text-dark text-uppercase ">Owner de la lista</h5>
+              </div>
+            </div>
             <h1 class="text-uppercase py-3">Hombres</h1>
             <table class="table table-bordered table-sm mb-5">
               <caption>Fin lista hombres</caption>
@@ -74,12 +85,15 @@
 
           </table>
 
-          <div class="p-5 text-center border border-dark mb-5">
-            <h1>CAMPOS PARA COMPLETAR</h1>
+          <div class="salto"></div>
+
+          {% include "partials/print-grid.njk" %}
+
+          <div class="mt-5">
+            <a href="list-guests.html" class="btn btn-lg btn-info">Volver</a>
+            <a href="#" onclick="printList()"  class="btn btn-lg btn-info float-right">Imprimir lista</a>
           </div>
 
-          <a href="list-guests.html" class="btn btn-lg btn-info">Volver</a>
-          <a href="#" onclick="printList()"  class="btn btn-lg btn-info float-right">Imprimir lista</a>
         </div>
       </div>
     </section>
