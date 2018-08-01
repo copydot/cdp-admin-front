@@ -1,0 +1,14 @@
+//
+// breadcrumb
+
+.breadcrumb{
+	background-color: transparent;
+	border-bottom: 1px solid $gray-200;
+	padding: 0px 0px 10px 0px;
+	.breadcrumb-item{
+		color: $gray-600;
+		a{
+			// color: $info;
+		}
+	}
+}
