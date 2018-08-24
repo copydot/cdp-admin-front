@@ -9,11 +9,35 @@
 
     <section class="panel">
 
-      <div class="heading heading-sm text-uppercase">
-        <a href="dashboard.html">EVENTOS /</a> RODRIGO DP & KNOWBRUo <small class="text-info">09/06/2018</small> /
-      </div>
+
+			<nav aria-label="breadcrumb">
+	      <ol class="breadcrumb">
+	        <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+	        <li class="breadcrumb-item active" aria-current="page">Eventos</li>
+	      </ol>
+	    </nav>
+
+      {% include "partials/heading-event.njk" %}
 
       <div class="row ">
+
+				<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+					<div class="card bg-info text-white">
+						<div class="card-header"></div>
+						<a href="list-create.html" class="btn-block">
+							<div class="card-body card-body-sm">
+								<div class=""></div>
+								<div class="text-white">
+									<i class="fas fa-3x fa-plus"></i>
+								</div>
+								<div class=""></div>
+							</div>
+						</a>
+						<div class="card-footer text-center">
+							crear lista
+						</div>
+					</div>
+				</div>
 
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
           <div class="card">
@@ -23,7 +47,7 @@
                 <div class="card-date"></div>
                 <div class="card-title font-weight-bold text-uppercase text-center">Invitados</div>
                 <div class="card-list">
-                  Invitados <span class="badge badge-info">20</span>
+                  Invitados <span class="badge badge-info">20/20</span>
                 </div>
               </div>
             </a>
@@ -41,7 +65,7 @@
                 <div class="card-date"></div>
                 <div class="card-title font-weight-bold text-uppercase text-center">Previa</div>
                 <div class="card-list">
-                  Invitados <span class="badge badge-info">20</span>
+                  Invitados <span class="badge badge-info">15/  20</span>
                 </div>
               </div>
             </a>
@@ -51,23 +75,6 @@
           </div>
         </div>
 
-        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-          <div class="card bg-info text-white">
-            <div class="card-header"></div>
-            <a href="list-create.html" class="btn-block">
-              <div class="card-body card-body-sm">
-                <div class=""></div>
-                <div class="text-white">
-                  <i class="fas fa-3x fa-plus"></i>
-                </div>
-                <div class=""></div>
-              </div>
-            </a>
-            <div class="card-footer text-center">
-              crear lista
-            </div>
-          </div>
-        </div>
 
       </div>
 
