@@ -17,7 +17,7 @@
 
 
     <div class="card mb-4">
-      <div class="card-body text-center">
+      <div class="card-body text-center py-0 py-lg-3">
         <div class="d-flex flex-column flex-sm-row justify-content-between">
           <div class="bg-info text-white p-4 mr-3 d-none d-sm-block">
             <i class="fas fa-fw fa-3x fa-glass-martini-alt"></i>
@@ -41,33 +41,7 @@
       </div>
     </div>
 
-    <div class="card mb-4">
-      <div class="card-body bg-light">
-        <div class="row">
-          <div class="col-12 col-sm-6">
-            <form class="" action="">
-
-              <div class="form-group">
-                <div class="input-group input-group-lg mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="fas fa-fw fa-user"></i>
-                    </span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="Buscar Persona" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="col-12 col-sm-6">
-            <div class="alert alert-info">
-              Ingrese Nombre o DNI
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
+    {% include "partials/list-person-search.njk" %}
 
     <div class="card mb-3 ">
       <div class="card-body table-responsive">
@@ -120,12 +94,12 @@
   $(document).ready(function() {
     $('#datatable').DataTable({
       "order": [[ 2, "asc" ]],
-      "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+      "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
       "language": {
-          "lengthMenu": "Mostrar _MENU_ registros por página",
+          "lengthMenu": "_MENU_",
           "search": "Buscar:",
           "zeroRecords":    "No se encontraron registros coincidentes",
-          "info": "Mostrando pagina _PAGE_ de _PAGES_",
+          "info": "_PAGE_ de _PAGES_",
           "infoEmpty": "No hay registros disponibles",
           "infoFiltered": "(filtrado de _MAX_ registros totales)",
       "paginate": {
