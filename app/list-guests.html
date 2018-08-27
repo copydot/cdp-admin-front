@@ -75,6 +75,7 @@
         <li class="breadcrumb-item active" aria-current="page">Listas</li>
       </ol>
     </nav>
+<<<<<<< HEAD
 
     <div class="heading heading-sm mb-0">
 	<div class="d-flex flex-column flex-sm-row flex-nowrap">
@@ -1968,6 +1969,2019 @@
 
   </section>
 
+=======
+
+    <div class="heading heading-sm mb-0">
+	<div class="d-flex flex-column flex-sm-row flex-nowrap">
+		<div class="order-sm-2 pb-2"><a href="dashboard.html" class="btn btn-sm btn-light text-uppercase">Volver</a></div>
+		<div class="order-sm-1 flex-grow-1"><span class="bg-danger text-white text-uppercase px-1">RODRIGO DP & KNOWBRUo</span></div>
+	</div>
+</div>
+
+
+
+    <div class="card mb-4">
+      <div class="card-body text-center py-0 py-lg-3">
+        <div class="d-flex flex-column flex-sm-row justify-content-between">
+          <div class="bg-info text-white p-4 mr-3 d-none d-sm-block">
+            <i class="fas fa-fw fa-3x fa-glass-martini-alt"></i>
+          </div>
+          <div class="">
+            <h3 class="text-uppercase my-0 py-2 text-info ">Gallery</h3>
+            <h5 class="font-weight-bold text-uppercase ">Lista de Previas</h5>
+            <hr>
+          </div>
+          <div class="d-flex flex-row flex-sm-column justify-content-between">
+            <div class="countdown">
+              <span class="text-info">Cierre de lista!</span>
+              <h5 id="clock"></h5>
+            </div>
+            <div class="">
+              <span class="text-info">Invitados</span>
+              <h5>150/200</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+
+	<div class="text-muted text-uppercase text-center pt-3">
+		Estado Normal
+	</div>
+
+	<div class="card-body">
+		<form class="text-center">
+			<div class="form-group">
+				<div class="input-group input-group-lg">
+					<input type="text" class="form-control" placeholder="Buscar Persona" aria-label="Username" aria-describedby="basic-addon1">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">
+							<i class="fas fa-fw fa-user"></i>
+						</span>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="card mb-4">
+
+	<div class="text-muted text-uppercase text-center pt-3">
+		Estado Resultado Positivo
+	</div>
+
+	<div class="card-body">
+		<form class="text-center">
+			<div class="form-group">
+				<div class="input-group input-group-lg">
+					<input type="text" class="form-control is-valid" placeholder="Buscar Persona" aria-label="Username" aria-describedby="basic-addon1">
+					<div class="input-group-prepend">
+						<span class="input-group-text bg-success text-white border-success" id="basic-addon1">
+							<i class="fas fa-fw fa-user"></i>
+						</span>
+					</div>
+					<div class="valid-feedback mb-1">
+						La persona que busca ya existe!
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<a href="javascript:;" class="btn btn-lg btn-success d-block d-sm-inline">Agregar Invitado</a>
+			</div>
+		</form>
+
+	</div>
+</div>
+
+<div class="card mb-4">
+
+	<div class="text-muted text-uppercase text-center pt-3">
+		Estado Resultado Negativo
+	</div>
+
+	<div class="card-body">
+		<form class="text-center">
+			<div class="form-group">
+				<div class="input-group input-group-lg">
+					<input type="text" class="form-control is-invalid" placeholder="Buscar Persona" aria-label="Username" aria-describedby="basic-addon1">
+					<div class="input-group-prepend">
+						<span class="input-group-text bg-danger text-white border-danger" id="basic-addon1">
+							<i class="fas fa-fw fa-user"></i>
+						</span>
+					</div>
+					<div class="invalid-feedback mb-1">
+						La persona que busca no existe.
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<a href="javascript:;" data-toggle="modal" data-target="#exampleModal" class="btn btn-lg btn-danger d-block d-sm-inline"> Crear Persona</a>
+			</div>
+		</form>
+
+	</div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Crear Persona</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="">
+
+					<div class="form-group">
+						<label for="">DNI <span class="text-danger">(*)</span></label>
+						<input type="text" name="" id="dni" value="" class="form-control is-invalid">
+						<div class="invalid-feedback">
+			        Please provide a valid city.
+			      </div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Nombre<span class="text-danger">(*)</span></label>
+								<input type="text" name="" id="name" value="" class="form-control">
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Apellido<span class="text-danger">(*)</span></label>
+								<input type="text" name="" id="name" value="" class="form-control">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="">Email <span class="text-danger">(*)</span></label>
+						<input type="text" name="" id="email" value="" class="form-control">
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Fecha Nacimiento <span class="text-danger">(*)</span></label>
+								<input type="date" name="" id="date" value="" class="form-control">
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Sexo <span class="text-danger">(*)</span></label>
+								<select name="" id="sexo" class="form-control" required>
+									<option value="">Seleccione</option>
+									<option value="f">Femenino</option>
+									<option value="m">Masculino</option>
+								</select>
+							</div>
+						</div>
+					</div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Crear y Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="card mb-3 ">
+      <div class="card-body table-responsive">
+        <table id="datatable" class="table table-striped table-bordered" style="width:100%">
+          <thead>
+            <tr>
+              <th>DNI</th>
+              <th>Invitado</th>
+              <th>Usuario</th>
+              <th>Email</th>
+              <th>Fec. Nac.</th>
+              <th>Ac</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr>
+              <td>112345678</td>
+              <td>invitado1</td>
+              <td>usuario1</td>
+              <td>email.invitado1@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>212345678</td>
+              <td>invitado2</td>
+              <td>usuario2</td>
+              <td>email.invitado2@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>312345678</td>
+              <td>invitado3</td>
+              <td>usuario3</td>
+              <td>email.invitado3@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>412345678</td>
+              <td>invitado4</td>
+              <td>usuario4</td>
+              <td>email.invitado4@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>512345678</td>
+              <td>invitado5</td>
+              <td>usuario5</td>
+              <td>email.invitado5@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>612345678</td>
+              <td>invitado6</td>
+              <td>usuario6</td>
+              <td>email.invitado6@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>712345678</td>
+              <td>invitado7</td>
+              <td>usuario7</td>
+              <td>email.invitado7@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>812345678</td>
+              <td>invitado8</td>
+              <td>usuario8</td>
+              <td>email.invitado8@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>912345678</td>
+              <td>invitado9</td>
+              <td>usuario9</td>
+              <td>email.invitado9@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>1012345678</td>
+              <td>invitado10</td>
+              <td>usuario10</td>
+              <td>email.invitado10@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>1112345678</td>
+              <td>invitado11</td>
+              <td>usuario11</td>
+              <td>email.invitado11@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>1212345678</td>
+              <td>invitado12</td>
+              <td>usuario12</td>
+              <td>email.invitado12@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>1312345678</td>
+              <td>invitado13</td>
+              <td>usuario13</td>
+              <td>email.invitado13@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>1412345678</td>
+              <td>invitado14</td>
+              <td>usuario14</td>
+              <td>email.invitado14@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>1512345678</td>
+              <td>invitado15</td>
+              <td>usuario15</td>
+              <td>email.invitado15@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>1612345678</td>
+              <td>invitado16</td>
+              <td>usuario16</td>
+              <td>email.invitado16@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>1712345678</td>
+              <td>invitado17</td>
+              <td>usuario17</td>
+              <td>email.invitado17@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>1812345678</td>
+              <td>invitado18</td>
+              <td>usuario18</td>
+              <td>email.invitado18@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>1912345678</td>
+              <td>invitado19</td>
+              <td>usuario19</td>
+              <td>email.invitado19@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>2012345678</td>
+              <td>invitado20</td>
+              <td>usuario20</td>
+              <td>email.invitado20@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>2112345678</td>
+              <td>invitado21</td>
+              <td>usuario21</td>
+              <td>email.invitado21@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>2212345678</td>
+              <td>invitado22</td>
+              <td>usuario22</td>
+              <td>email.invitado22@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>2312345678</td>
+              <td>invitado23</td>
+              <td>usuario23</td>
+              <td>email.invitado23@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>2412345678</td>
+              <td>invitado24</td>
+              <td>usuario24</td>
+              <td>email.invitado24@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>2512345678</td>
+              <td>invitado25</td>
+              <td>usuario25</td>
+              <td>email.invitado25@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>2612345678</td>
+              <td>invitado26</td>
+              <td>usuario26</td>
+              <td>email.invitado26@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>2712345678</td>
+              <td>invitado27</td>
+              <td>usuario27</td>
+              <td>email.invitado27@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>2812345678</td>
+              <td>invitado28</td>
+              <td>usuario28</td>
+              <td>email.invitado28@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>2912345678</td>
+              <td>invitado29</td>
+              <td>usuario29</td>
+              <td>email.invitado29@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>3012345678</td>
+              <td>invitado30</td>
+              <td>usuario30</td>
+              <td>email.invitado30@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>3112345678</td>
+              <td>invitado31</td>
+              <td>usuario31</td>
+              <td>email.invitado31@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>3212345678</td>
+              <td>invitado32</td>
+              <td>usuario32</td>
+              <td>email.invitado32@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>3312345678</td>
+              <td>invitado33</td>
+              <td>usuario33</td>
+              <td>email.invitado33@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>3412345678</td>
+              <td>invitado34</td>
+              <td>usuario34</td>
+              <td>email.invitado34@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>3512345678</td>
+              <td>invitado35</td>
+              <td>usuario35</td>
+              <td>email.invitado35@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>3612345678</td>
+              <td>invitado36</td>
+              <td>usuario36</td>
+              <td>email.invitado36@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>3712345678</td>
+              <td>invitado37</td>
+              <td>usuario37</td>
+              <td>email.invitado37@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>3812345678</td>
+              <td>invitado38</td>
+              <td>usuario38</td>
+              <td>email.invitado38@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>3912345678</td>
+              <td>invitado39</td>
+              <td>usuario39</td>
+              <td>email.invitado39@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>4012345678</td>
+              <td>invitado40</td>
+              <td>usuario40</td>
+              <td>email.invitado40@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>4112345678</td>
+              <td>invitado41</td>
+              <td>usuario41</td>
+              <td>email.invitado41@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>4212345678</td>
+              <td>invitado42</td>
+              <td>usuario42</td>
+              <td>email.invitado42@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>4312345678</td>
+              <td>invitado43</td>
+              <td>usuario43</td>
+              <td>email.invitado43@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>4412345678</td>
+              <td>invitado44</td>
+              <td>usuario44</td>
+              <td>email.invitado44@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>4512345678</td>
+              <td>invitado45</td>
+              <td>usuario45</td>
+              <td>email.invitado45@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>4612345678</td>
+              <td>invitado46</td>
+              <td>usuario46</td>
+              <td>email.invitado46@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>4712345678</td>
+              <td>invitado47</td>
+              <td>usuario47</td>
+              <td>email.invitado47@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>4812345678</td>
+              <td>invitado48</td>
+              <td>usuario48</td>
+              <td>email.invitado48@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>4912345678</td>
+              <td>invitado49</td>
+              <td>usuario49</td>
+              <td>email.invitado49@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>5012345678</td>
+              <td>invitado50</td>
+              <td>usuario50</td>
+              <td>email.invitado50@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>5112345678</td>
+              <td>invitado51</td>
+              <td>usuario51</td>
+              <td>email.invitado51@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>5212345678</td>
+              <td>invitado52</td>
+              <td>usuario52</td>
+              <td>email.invitado52@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>5312345678</td>
+              <td>invitado53</td>
+              <td>usuario53</td>
+              <td>email.invitado53@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>5412345678</td>
+              <td>invitado54</td>
+              <td>usuario54</td>
+              <td>email.invitado54@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>5512345678</td>
+              <td>invitado55</td>
+              <td>usuario55</td>
+              <td>email.invitado55@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>5612345678</td>
+              <td>invitado56</td>
+              <td>usuario56</td>
+              <td>email.invitado56@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>5712345678</td>
+              <td>invitado57</td>
+              <td>usuario57</td>
+              <td>email.invitado57@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>5812345678</td>
+              <td>invitado58</td>
+              <td>usuario58</td>
+              <td>email.invitado58@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>5912345678</td>
+              <td>invitado59</td>
+              <td>usuario59</td>
+              <td>email.invitado59@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>6012345678</td>
+              <td>invitado60</td>
+              <td>usuario60</td>
+              <td>email.invitado60@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>6112345678</td>
+              <td>invitado61</td>
+              <td>usuario61</td>
+              <td>email.invitado61@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>6212345678</td>
+              <td>invitado62</td>
+              <td>usuario62</td>
+              <td>email.invitado62@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>6312345678</td>
+              <td>invitado63</td>
+              <td>usuario63</td>
+              <td>email.invitado63@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>6412345678</td>
+              <td>invitado64</td>
+              <td>usuario64</td>
+              <td>email.invitado64@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>6512345678</td>
+              <td>invitado65</td>
+              <td>usuario65</td>
+              <td>email.invitado65@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>6612345678</td>
+              <td>invitado66</td>
+              <td>usuario66</td>
+              <td>email.invitado66@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>6712345678</td>
+              <td>invitado67</td>
+              <td>usuario67</td>
+              <td>email.invitado67@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>6812345678</td>
+              <td>invitado68</td>
+              <td>usuario68</td>
+              <td>email.invitado68@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>6912345678</td>
+              <td>invitado69</td>
+              <td>usuario69</td>
+              <td>email.invitado69@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>7012345678</td>
+              <td>invitado70</td>
+              <td>usuario70</td>
+              <td>email.invitado70@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>7112345678</td>
+              <td>invitado71</td>
+              <td>usuario71</td>
+              <td>email.invitado71@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>7212345678</td>
+              <td>invitado72</td>
+              <td>usuario72</td>
+              <td>email.invitado72@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>7312345678</td>
+              <td>invitado73</td>
+              <td>usuario73</td>
+              <td>email.invitado73@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>7412345678</td>
+              <td>invitado74</td>
+              <td>usuario74</td>
+              <td>email.invitado74@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>7512345678</td>
+              <td>invitado75</td>
+              <td>usuario75</td>
+              <td>email.invitado75@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>7612345678</td>
+              <td>invitado76</td>
+              <td>usuario76</td>
+              <td>email.invitado76@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>7712345678</td>
+              <td>invitado77</td>
+              <td>usuario77</td>
+              <td>email.invitado77@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>7812345678</td>
+              <td>invitado78</td>
+              <td>usuario78</td>
+              <td>email.invitado78@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>7912345678</td>
+              <td>invitado79</td>
+              <td>usuario79</td>
+              <td>email.invitado79@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>8012345678</td>
+              <td>invitado80</td>
+              <td>usuario80</td>
+              <td>email.invitado80@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>8112345678</td>
+              <td>invitado81</td>
+              <td>usuario81</td>
+              <td>email.invitado81@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>8212345678</td>
+              <td>invitado82</td>
+              <td>usuario82</td>
+              <td>email.invitado82@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>8312345678</td>
+              <td>invitado83</td>
+              <td>usuario83</td>
+              <td>email.invitado83@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>8412345678</td>
+              <td>invitado84</td>
+              <td>usuario84</td>
+              <td>email.invitado84@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>8512345678</td>
+              <td>invitado85</td>
+              <td>usuario85</td>
+              <td>email.invitado85@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>8612345678</td>
+              <td>invitado86</td>
+              <td>usuario86</td>
+              <td>email.invitado86@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>8712345678</td>
+              <td>invitado87</td>
+              <td>usuario87</td>
+              <td>email.invitado87@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>8812345678</td>
+              <td>invitado88</td>
+              <td>usuario88</td>
+              <td>email.invitado88@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>8912345678</td>
+              <td>invitado89</td>
+              <td>usuario89</td>
+              <td>email.invitado89@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>9012345678</td>
+              <td>invitado90</td>
+              <td>usuario90</td>
+              <td>email.invitado90@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>9112345678</td>
+              <td>invitado91</td>
+              <td>usuario91</td>
+              <td>email.invitado91@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>9212345678</td>
+              <td>invitado92</td>
+              <td>usuario92</td>
+              <td>email.invitado92@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>9312345678</td>
+              <td>invitado93</td>
+              <td>usuario93</td>
+              <td>email.invitado93@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>9412345678</td>
+              <td>invitado94</td>
+              <td>usuario94</td>
+              <td>email.invitado94@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>9512345678</td>
+              <td>invitado95</td>
+              <td>usuario95</td>
+              <td>email.invitado95@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>9612345678</td>
+              <td>invitado96</td>
+              <td>usuario96</td>
+              <td>email.invitado96@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>9712345678</td>
+              <td>invitado97</td>
+              <td>usuario97</td>
+              <td>email.invitado97@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>9812345678</td>
+              <td>invitado98</td>
+              <td>usuario98</td>
+              <td>email.invitado98@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>9912345678</td>
+              <td>invitado99</td>
+              <td>usuario99</td>
+              <td>email.invitado99@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>10012345678</td>
+              <td>invitado100</td>
+              <td>usuario100</td>
+              <td>email.invitado100@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>10112345678</td>
+              <td>invitado101</td>
+              <td>usuario101</td>
+              <td>email.invitado101@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>10212345678</td>
+              <td>invitado102</td>
+              <td>usuario102</td>
+              <td>email.invitado102@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>10312345678</td>
+              <td>invitado103</td>
+              <td>usuario103</td>
+              <td>email.invitado103@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>10412345678</td>
+              <td>invitado104</td>
+              <td>usuario104</td>
+              <td>email.invitado104@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>10512345678</td>
+              <td>invitado105</td>
+              <td>usuario105</td>
+              <td>email.invitado105@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>10612345678</td>
+              <td>invitado106</td>
+              <td>usuario106</td>
+              <td>email.invitado106@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>10712345678</td>
+              <td>invitado107</td>
+              <td>usuario107</td>
+              <td>email.invitado107@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>10812345678</td>
+              <td>invitado108</td>
+              <td>usuario108</td>
+              <td>email.invitado108@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>10912345678</td>
+              <td>invitado109</td>
+              <td>usuario109</td>
+              <td>email.invitado109@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>11012345678</td>
+              <td>invitado110</td>
+              <td>usuario110</td>
+              <td>email.invitado110@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>11112345678</td>
+              <td>invitado111</td>
+              <td>usuario111</td>
+              <td>email.invitado111@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>11212345678</td>
+              <td>invitado112</td>
+              <td>usuario112</td>
+              <td>email.invitado112@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>11312345678</td>
+              <td>invitado113</td>
+              <td>usuario113</td>
+              <td>email.invitado113@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>11412345678</td>
+              <td>invitado114</td>
+              <td>usuario114</td>
+              <td>email.invitado114@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>11512345678</td>
+              <td>invitado115</td>
+              <td>usuario115</td>
+              <td>email.invitado115@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>11612345678</td>
+              <td>invitado116</td>
+              <td>usuario116</td>
+              <td>email.invitado116@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>11712345678</td>
+              <td>invitado117</td>
+              <td>usuario117</td>
+              <td>email.invitado117@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>11812345678</td>
+              <td>invitado118</td>
+              <td>usuario118</td>
+              <td>email.invitado118@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>11912345678</td>
+              <td>invitado119</td>
+              <td>usuario119</td>
+              <td>email.invitado119@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>12012345678</td>
+              <td>invitado120</td>
+              <td>usuario120</td>
+              <td>email.invitado120@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>12112345678</td>
+              <td>invitado121</td>
+              <td>usuario121</td>
+              <td>email.invitado121@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>12212345678</td>
+              <td>invitado122</td>
+              <td>usuario122</td>
+              <td>email.invitado122@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>12312345678</td>
+              <td>invitado123</td>
+              <td>usuario123</td>
+              <td>email.invitado123@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>12412345678</td>
+              <td>invitado124</td>
+              <td>usuario124</td>
+              <td>email.invitado124@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>12512345678</td>
+              <td>invitado125</td>
+              <td>usuario125</td>
+              <td>email.invitado125@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>12612345678</td>
+              <td>invitado126</td>
+              <td>usuario126</td>
+              <td>email.invitado126@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>12712345678</td>
+              <td>invitado127</td>
+              <td>usuario127</td>
+              <td>email.invitado127@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>12812345678</td>
+              <td>invitado128</td>
+              <td>usuario128</td>
+              <td>email.invitado128@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>12912345678</td>
+              <td>invitado129</td>
+              <td>usuario129</td>
+              <td>email.invitado129@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>13012345678</td>
+              <td>invitado130</td>
+              <td>usuario130</td>
+              <td>email.invitado130@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>13112345678</td>
+              <td>invitado131</td>
+              <td>usuario131</td>
+              <td>email.invitado131@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>13212345678</td>
+              <td>invitado132</td>
+              <td>usuario132</td>
+              <td>email.invitado132@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>13312345678</td>
+              <td>invitado133</td>
+              <td>usuario133</td>
+              <td>email.invitado133@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>13412345678</td>
+              <td>invitado134</td>
+              <td>usuario134</td>
+              <td>email.invitado134@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>13512345678</td>
+              <td>invitado135</td>
+              <td>usuario135</td>
+              <td>email.invitado135@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>13612345678</td>
+              <td>invitado136</td>
+              <td>usuario136</td>
+              <td>email.invitado136@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>13712345678</td>
+              <td>invitado137</td>
+              <td>usuario137</td>
+              <td>email.invitado137@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>13812345678</td>
+              <td>invitado138</td>
+              <td>usuario138</td>
+              <td>email.invitado138@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>13912345678</td>
+              <td>invitado139</td>
+              <td>usuario139</td>
+              <td>email.invitado139@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>14012345678</td>
+              <td>invitado140</td>
+              <td>usuario140</td>
+              <td>email.invitado140@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>14112345678</td>
+              <td>invitado141</td>
+              <td>usuario141</td>
+              <td>email.invitado141@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>14212345678</td>
+              <td>invitado142</td>
+              <td>usuario142</td>
+              <td>email.invitado142@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>14312345678</td>
+              <td>invitado143</td>
+              <td>usuario143</td>
+              <td>email.invitado143@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>14412345678</td>
+              <td>invitado144</td>
+              <td>usuario144</td>
+              <td>email.invitado144@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>14512345678</td>
+              <td>invitado145</td>
+              <td>usuario145</td>
+              <td>email.invitado145@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>14612345678</td>
+              <td>invitado146</td>
+              <td>usuario146</td>
+              <td>email.invitado146@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>14712345678</td>
+              <td>invitado147</td>
+              <td>usuario147</td>
+              <td>email.invitado147@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>14812345678</td>
+              <td>invitado148</td>
+              <td>usuario148</td>
+              <td>email.invitado148@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>14912345678</td>
+              <td>invitado149</td>
+              <td>usuario149</td>
+              <td>email.invitado149@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+            <tr>
+              <td>15012345678</td>
+              <td>invitado150</td>
+              <td>usuario150</td>
+              <td>email.invitado150@mail.com</td>
+              <td>00/00/0000</td>
+              <td>
+                <a href="#">
+                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
+                </a></td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <button type="button" name="button" class="btn btn-lg btn-info" id="btn-close-list">
+        Cerrar lista
+      </button>
+      <a href="list-print.html" class="btn btn-lg btn-light float-right" id="btn-print-list">Imprimir Lista</a>
+    </div>
+
+
+  </section>
+
+>>>>>>> fix
 </div>
 
 
@@ -1999,12 +4013,12 @@
   $(document).ready(function() {
     $('#datatable').DataTable({
       "order": [[ 2, "asc" ]],
-      "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+      "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
       "language": {
-          "lengthMenu": "Mostrar _MENU_ registros por página",
+          "lengthMenu": "_MENU_",
           "search": "Buscar:",
           "zeroRecords":    "No se encontraron registros coincidentes",
-          "info": "Mostrando pagina _PAGE_ de _PAGES_",
+          "info": "_PAGE_ de _PAGES_",
           "infoEmpty": "No hay registros disponibles",
           "infoFiltered": "(filtrado de _MAX_ registros totales)",
       "paginate": {
@@ -2028,6 +4042,7 @@
   var hora = tiempo.getHours();
   var minuto = tiempo.getMinutes()+1;
   var segundo = tiempo.getSeconds();
+<<<<<<< HEAD
 
   var fecha = year + '/' + month + '/' + date;
   var tiempo = hora + ':' + minuto + ':' + segundo;
@@ -2035,6 +4050,15 @@
   var limite = fecha + ' ' + tiempo;
   // fin temporal
 
+=======
+
+  var fecha = year + '/' + month + '/' + date;
+  var tiempo = hora + ':' + minuto + ':' + segundo;
+
+  var limite = fecha + ' ' + tiempo;
+  // fin temporal
+
+>>>>>>> fix
   $('#clock').countdown(limite) // pasar fecha y hora de cierre de la lista
   .on('update.countdown', function(event) {
     var format = '%H:%M:%S';
