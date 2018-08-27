@@ -1,0 +1,144 @@
+<div class="card mb-4">
+
+	<div class="text-muted text-uppercase text-center pt-3">
+		Estado Normal
+	</div>
+
+	<div class="card-body">
+		<form class="text-center">
+			<div class="form-group">
+				<div class="input-group input-group-lg">
+					<input type="text" class="form-control" placeholder="Buscar Persona" aria-label="Username" aria-describedby="basic-addon1">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">
+							<i class="fas fa-fw fa-user"></i>
+						</span>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="card mb-4">
+
+	<div class="text-muted text-uppercase text-center pt-3">
+		Estado Resultado Positivo
+	</div>
+
+	<div class="card-body">
+		<form class="text-center">
+			<div class="form-group">
+				<div class="input-group input-group-lg">
+					<input type="text" class="form-control is-valid" placeholder="Buscar Persona" aria-label="Username" aria-describedby="basic-addon1">
+					<div class="input-group-prepend">
+						<span class="input-group-text bg-success text-white border-success" id="basic-addon1">
+							<i class="fas fa-fw fa-user"></i>
+						</span>
+					</div>
+					<div class="valid-feedback mb-1">
+						La persona que busca ya existe!
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<a href="javascript:;" class="btn btn-lg btn-success d-block d-sm-inline">Agregar Invitado</a>
+			</div>
+		</form>
+
+	</div>
+</div>
+
+<div class="card mb-4">
+
+	<div class="text-muted text-uppercase text-center pt-3">
+		Estado Resultado Negativo
+	</div>
+
+	<div class="card-body">
+		<form class="text-center">
+			<div class="form-group">
+				<div class="input-group input-group-lg">
+					<input type="text" class="form-control is-invalid" placeholder="Buscar Persona" aria-label="Username" aria-describedby="basic-addon1">
+					<div class="input-group-prepend">
+						<span class="input-group-text bg-danger text-white border-danger" id="basic-addon1">
+							<i class="fas fa-fw fa-user"></i>
+						</span>
+					</div>
+					<div class="invalid-feedback mb-1">
+						La persona que busca no existe.
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<a href="javascript:;" data-toggle="modal" data-target="#exampleModal" class="btn btn-lg btn-danger d-block d-sm-inline"> Crear Persona</a>
+			</div>
+		</form>
+
+	</div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Crear Persona</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="">
+
+					<div class="form-group">
+						<label for="">DNI <span class="text-danger">(*)</span></label>
+						<input type="text" name="" id="dni" value="" class="form-control is-invalid">
+						<div class="invalid-feedback">
+			        Please provide a valid city.
+			      </div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Nombre<span class="text-danger">(*)</span></label>
+								<input type="text" name="" id="name" value="" class="form-control">
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Apellido<span class="text-danger">(*)</span></label>
+								<input type="text" name="" id="name" value="" class="form-control">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="">Email <span class="text-danger">(*)</span></label>
+						<input type="text" name="" id="email" value="" class="form-control">
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Fecha Nacimiento <span class="text-danger">(*)</span></label>
+								<input type="date" name="" id="date" value="" class="form-control">
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label for="">Sexo <span class="text-danger">(*)</span></label>
+								<select name="" id="sexo" class="form-control" required>
+									<option value="">Seleccione</option>
+									<option value="f">Femenino</option>
+									<option value="m">Masculino</option>
+								</select>
+							</div>
+						</div>
+					</div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Crear y Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
