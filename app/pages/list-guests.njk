@@ -1,8 +1,9 @@
 {% extends "layout.njk" %}
+
 {% block title %}Lista de Invitados{% endblock %}
+
 {% block content %}
 <div class="container">
-<<<<<<< HEAD
 
   <section>
 
@@ -15,137 +16,6 @@
     </nav>
 
     {% include "partials/heading-event.njk" %}
-
-
-    <div class="card mb-4">
-      <div class="card-body text-center">
-=======
-
-  <section>
-
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
-        <li class="breadcrumb-item"><a href="list-view.html">Eventos</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Listas</li>
-      </ol>
-    </nav>
-
-    {% include "partials/heading-event.njk" %}
-
-
-    <div class="card mb-4">
-      <div class="card-body text-center py-0 py-lg-3">
->>>>>>> fix
-        <div class="d-flex flex-column flex-sm-row justify-content-between">
-          <div class="bg-info text-white p-4 mr-3 d-none d-sm-block">
-            <i class="fas fa-fw fa-3x fa-glass-martini-alt"></i>
-          </div>
-          <div class="">
-            <h3 class="text-uppercase my-0 py-2 text-info ">Gallery</h3>
-            <h5 class="font-weight-bold text-uppercase ">Lista de Previas</h5>
-            <hr>
-<<<<<<< HEAD
-          </div>
-          <div class="d-flex flex-row flex-sm-column justify-content-between">
-            <div class="countdown">
-              <span class="text-info">Cierre de lista!</span>
-              <h5 id="clock"></h5>
-            </div>
-            <div class="">
-              <span class="text-info">Invitados</span>
-              <h5>150/200</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card mb-4">
-      <div class="card-body bg-light">
-        <div class="row">
-          <div class="col-12 col-sm-6">
-            <form class="" action="">
-
-              <div class="form-group">
-                <div class="input-group input-group-lg mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="fas fa-fw fa-user"></i>
-                    </span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="Buscar Persona" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="col-12 col-sm-6">
-            <div class="alert alert-info">
-              Ingrese Nombre o DNI
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="card mb-3 ">
-      <div class="card-body table-responsive">
-        <table id="datatable" class="table table-striped table-bordered" style="width:100%">
-          <thead>
-            <tr>
-              <th>DNI</th>
-              <th>Invitado</th>
-              <th>Usuario</th>
-              <th>Email</th>
-              <th>Fec. Nac.</th>
-              <th>Ac</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for i in range(1, 151) %}
-            <tr>
-              <td>{{ i }}12345678</td>
-              <td>invitado{{ i }}</td>
-              <td>usuario{{ i }}</td>
-              <td>email.invitado{{ i }}@mail.com</td>
-              <td>00/00/0000</td>
-              <td>
-                <a href="#">
-                  <i class="fas fa-fw fa-lg fa-times text-danger"></i>
-                </a></td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div>
-      <button type="button" name="button" class="btn btn-lg btn-info" id="btn-close-list">
-        Cerrar lista
-      </button>
-      <a href="list-print.html" class="btn btn-lg btn-light float-right" id="btn-print-list">Imprimir Lista</a>
-    </div>
-
-
-  </section>
-
-=======
-          </div>
-          <div class="d-flex flex-row flex-sm-column justify-content-between">
-            <div class="countdown">
-              <span class="text-info">Cierre de lista!</span>
-              <h5 id="clock"></h5>
-            </div>
-            <div class="">
-              <span class="text-info">Invitados</span>
-              <h5>150/200</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     {% include "partials/list-person-search.njk" %}
 
@@ -191,7 +61,6 @@
 
   </section>
 
->>>>>>> fix
 </div>
 {% endblock %}
 
