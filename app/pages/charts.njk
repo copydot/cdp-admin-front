@@ -22,15 +22,16 @@
 
 	<section>
 
-		<div class="row">
+		<h4 class="mb-3"><a href="https://gionkunz.github.io/chartist-js/" target="_blank">Chartist</a></h4>
 
+		<div class="row">
 			<div class="col-12 col-md-6">
 				<div class="card mb-4">
 					<div class="card-header">
 						Invitados por fin de semana
 					</div>
 					<div class="card-body px-1">
-						<div class="ct-chart ct-perfect-fourth" id="chart-7"></div>
+						<div class="ct-chart ct-perfect-fourth" id="smil-animations"></div>
 					</div>
 				</div>
 			</div>
@@ -40,81 +41,37 @@
 						Invitados por fin de semana
 					</div>
 					<div class="card-body px-1">
-						<div class="ct-chart ct-perfect-fourth" id="chart-8"></div>
+						<div class="ct-chart ct-perfect-fourth" id="simple-line-chart"></div>
 					</div>
 				</div>
 			</div>
-
 		</div>
+
+		<h4 class="mb-3"><a href="https://c3js.org/" target="_blank">C3</a></h4>
+
 		<div class="row">
-
-			<div class="col-12 col-md-4">
+			<div class="col-12 col-md-6">
 				<div class="card mb-4">
 					<div class="card-header">
-						SIMPLE LINE CHART
+						Invitados por fin de semana
 					</div>
 					<div class="card-body px-1">
-						<div class="ct-chart ct-perfect-fourth" id="chart-1"></div>
+						<div id="line-regions"></div>
 					</div>
 				</div>
 			</div>
-
-			<div class="col-12 col-md-4">
+			<div class="col-12 col-md-6">
 				<div class="card mb-4">
 					<div class="card-header">
-						LINE CHART WITH AREA
+						Invitados por fin de semana
 					</div>
 					<div class="card-body px-1">
-						<div class="ct-chart ct-perfect-fourth" id="chart-2"></div>
+						<div id="pie-chart"></div>
 					</div>
 				</div>
 			</div>
-
-			<div class="col-12 col-md-4">
-				<div class="card mb-4">
-					<div class="card-header">
-						PIE CHART WITH CUSTOM LABELS
-					</div>
-					<div class="card-body px-1">
-						<div class="ct-chart ct-perfect-fourth" id="chart-3"></div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-12 col-md-4">
-				<div class="card mb-4">
-					<div class="card-header">
-						ADVANCED SMIL ANIMATIONS
-					</div>
-					<div class="card-body px-1">
-						<div class="ct-chart ct-perfect-fourth" id="chart-4"></div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-12 col-md-4">
-				<div class="card mb-4">
-					<div class="card-header">
-						SOME SVG ANIMATIONS
-					</div>
-					<div class="card-body px-1">
-						<div class="ct-chart ct-perfect-fourth" id="chart-5"></div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-12 col-md-4">
-				<div class="card mb-4">
-					<div class="card-header">
-						ANIMATING A DONUT WITH SVG.ANIMATE
-					</div>
-					<div class="card-body px-1">
-						<div class="ct-chart ct-perfect-fourth" id="chart-6"></div>
-					</div>
-				</div>
-			</div>
-
 		</div>
+
 
 	</section>
 
@@ -124,392 +81,218 @@
 {% block js %}
 <script type="text/javascript">
 
+//smil-animations Chart
+var chart = new Chartist.Line('#smil-animations', {
+  labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+  series: [
+    [12, 9, 7, 8, 5, 4, 6, 2, 3, 3, 4, 6],
+    [4,  5, 3, 7, 3, 5, 5, 3, 4, 4, 5, 5],
+    [5,  3, 4, 5, 6, 3, 3, 4, 5, 6, 3, 4],
+    [3,  4, 5, 6, 7, 6, 4, 5, 6, 7, 6, 3]
+  ]
+}, {
+  low: 0,
+  plugins: [
+    Chartist.plugins.tooltip()
+  ]
+});
 
-	//##
-	//## CHART 1 STATIC
-	//##
+// Let's put a sequence number aside so we can use it in the event callbacks
+var seq = 0,
+  delays = 80,
+  durations = 500;
 
-	new Chartist.Line('#chart-1', {
-		labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-		series: [
-			[12, 9, 7, 8, 5],
-			[2, 1, 3.5, 7, 3],
-			[1, 3, 4, 5, 6]
-		]
-		}, {
-		fullWidth: true,
-		chartPadding: {
-			right: 40
-		}
-	});
+// Once the chart is fully created we reset the sequence
+chart.on('created', function() {
+  seq = 0;
+});
 
+// On each drawn element by Chartist we use the Chartist.Svg API to trigger SMIL animations
+chart.on('draw', function(data) {
+  seq++;
 
-	//##
-	//## CHART 2 STATIC
-	//##
+  if(data.type === 'line') {
+    // If the drawn element is a line we do a simple opacity fade in. This could also be achieved using CSS3 animations.
+    data.element.animate({
+      opacity: {
+        // The delay when we like to start the animation
+        begin: seq * delays + 1000,
+        // Duration of the animation
+        dur: durations,
+        // The value where the animation should start
+        from: 0,
+        // The value where it should end
+        to: 1
+      }
+    });
+  } else if(data.type === 'label' && data.axis === 'x') {
+    data.element.animate({
+      y: {
+        begin: seq * delays,
+        dur: durations,
+        from: data.y + 100,
+        to: data.y,
+        // We can specify an easing function from Chartist.Svg.Easing
+        easing: 'easeOutQuart'
+      }
+    });
+  } else if(data.type === 'label' && data.axis === 'y') {
+    data.element.animate({
+      x: {
+        begin: seq * delays,
+        dur: durations,
+        from: data.x - 100,
+        to: data.x,
+        easing: 'easeOutQuart'
+      }
+    });
+  } else if(data.type === 'point') {
+    data.element.animate({
+      x1: {
+        begin: seq * delays,
+        dur: durations,
+        from: data.x - 10,
+        to: data.x,
+        easing: 'easeOutQuart'
+      },
+      x2: {
+        begin: seq * delays,
+        dur: durations,
+        from: data.x - 10,
+        to: data.x,
+        easing: 'easeOutQuart'
+      },
+      opacity: {
+        begin: seq * delays,
+        dur: durations,
+        from: 0,
+        to: 1,
+        easing: 'easeOutQuart'
+      }
+    });
+  } else if(data.type === 'grid') {
+    // Using data.axis we get x or y which we can use to construct our animation definition objects
+    var pos1Animation = {
+      begin: seq * delays,
+      dur: durations,
+      from: data[data.axis.units.pos + '1'] - 30,
+      to: data[data.axis.units.pos + '1'],
+      easing: 'easeOutQuart'
+    };
 
-	new Chartist.Line('#chart-2', {
-	  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-	  series: [
-	    [5, -4, 3, 7, 20, 10, 3, 4, 8, -10, 6, -8]
-	  ]
-	}, {
-	  showArea: true,
-	  axisY: {
-	    onlyInteger: true
-	  },
-	  plugins: [
-	    Chartist.plugins.ctThreshold({
-	      threshold: 4
-	    })
-	  ]
-	});
+    var pos2Animation = {
+      begin: seq * delays,
+      dur: durations,
+      from: data[data.axis.units.pos + '2'] - 100,
+      to: data[data.axis.units.pos + '2'],
+      easing: 'easeOutQuart'
+    };
 
+    var animations = {};
+    animations[data.axis.units.pos + '1'] = pos1Animation;
+    animations[data.axis.units.pos + '2'] = pos2Animation;
+    animations['opacity'] = {
+      begin: seq * delays,
+      dur: durations,
+      from: 0,
+      to: 1,
+      easing: 'easeOutQuart'
+    };
 
-	//##
-	//## CHART 3 STATIC
-	//##
+    data.element.animate(animations);
+  }
+});
 
-	var data = {
-	  labels: ['Bananas', 'Apples', 'Grapes'],
-	  series: [20, 15, 40]
-	};
-	var options = {
-	  labelInterpolationFnc: function(value) {
-	    return value[0]
-	  }
-	};
-	var responsiveOptions = [
-	  ['screen and (min-width: 640px)', {
-	    chartPadding: 30,
-	    labelOffset: 100,
-	    labelDirection: 'explode',
-	    labelInterpolationFnc: function(value) {
-	      return value;
-	    }
-	  }],
-	  ['screen and (min-width: 1024px)', {
-	    labelOffset: 80,
-	    chartPadding: 20
-	  }]
-	];
-
-	new Chartist.Pie('#chart-3', data, options, responsiveOptions);
-
-
-	//##
-	//## CHART 4 ANIMATED
-	//##
-
-	var chart = new Chartist.Line('#chart-4', {
-	  labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-	  series: [
-	    [12, 4, 2, 8, 5, 4, 6, 2, 3, 3, 4, 6],
-	    [4, 8, 9, 3, 7, 2, 10, 5, 8, 1, 7, 10]
-	  ]
-	}, {
-	  low: 0,
-	  showLine: false,
-	  axisX: {
-	    showLabel: false,
-	    offset: 0
-	  },
-	  axisY: {
-	    showLabel: false,
-	    offset: 0
-	  }
-	});
-
-	// Let's put a sequence number aside so we can use it in the event callbacks
-	var seq = 0;
-
-	// Once the chart is fully created we reset the sequence
-	chart.on('created', function() {
-	  seq = 0;
-	});
-
-	// On each drawn element by Chartist we use the Chartist.Svg API to trigger SMIL animations
-	chart.on('draw', function(data) {
-	  if(data.type === 'point') {
-	    // If the drawn element is a line we do a simple opacity fade in. This could also be achieved using CSS3 animations.
-	    data.element.animate({
-	      opacity: {
-	        // The delay when we like to start the animation
-	        begin: seq++ * 80,
-	        // Duration of the animation
-	        dur: 500,
-	        // The value where the animation should start
-	        from: 0,
-	        // The value where it should end
-	        to: 1
-	      },
-	      x1: {
-	        begin: seq++ * 80,
-	        dur: 500,
-	        from: data.x - 100,
-	        to: data.x,
-	        // You can specify an easing function name or use easing functions from Chartist.Svg.Easing directly
-	        easing: Chartist.Svg.Easing.easeOutQuart
-	      }
-	    });
-	  }
-	});
-
-	// For the sake of the example we update the chart every time it's created with a delay of 8 seconds
-	chart.on('created', function() {
-	  if(window.__anim0987432598723) {
-	    clearTimeout(window.__anim0987432598723);
-	    window.__anim0987432598723 = null;
-	  }
-	  window.__anim0987432598723 = setTimeout(chart.update.bind(chart), 8000);
-	});
+// For the sake of the example we update the chart every time it's created with a delay of 10 seconds
+chart.on('created', function() {
+  if(window.__exampleAnimateTimeout) {
+    clearTimeout(window.__exampleAnimateTimeout);
+    window.__exampleAnimateTimeout = null;
+  }
+  window.__exampleAnimateTimeout = setTimeout(chart.update.bind(chart), 12000);
+});
 
 
-	//##
-	//## CHART 5 ANIMATED
-	//##
 
-	var chart = new Chartist.Line('#chart-5', {
-	  labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-	  series: [
-	    [12, 9, 7, 8, 5, 4, 6, 2, 3, 3, 4, 6],
-	    [4,  5, 3, 7, 3, 5, 5, 3, 4, 4, 5, 5],
-	    [5,  3, 4, 5, 6, 3, 3, 4, 5, 6, 3, 4],
-	    [3,  4, 5, 6, 7, 6, 4, 5, 6, 7, 6, 3]
-	  ]
-	}, {
-	  low: 0
-	});
+//Simple line chart
+new Chartist.Line('#simple-line-chart', {
+  labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+  series: [
+    [12, 9, 7, 8, 5],
+    [2, 1, 3.5, 7, 3],
+    [1, 3, 4, 5, 6]
+  ]
+}, {
+  fullWidth: true,
+  chartPadding: {
+    right: 40
+  },
+  plugins: [
+    Chartist.plugins.tooltip()
+  ]
+});
 
-	// Let's put a sequence number aside so we can use it in the event callbacks
-	var seq = 0,
-	  delays = 80,
-	  durations = 500;
+//
+// Chart C3
 
-	// Once the chart is fully created we reset the sequence
-	chart.on('created', function() {
-	  seq = 0;
-	});
+!function($) {
+    "use strict";
 
-	// On each drawn element by Chartist we use the Chartist.Svg API to trigger SMIL animations
-	chart.on('draw', function(data) {
-	  seq++;
+    var ChartC3 = function() {};
 
-	  if(data.type === 'line') {
-	    // If the drawn element is a line we do a simple opacity fade in. This could also be achieved using CSS3 animations.
-	    data.element.animate({
-	      opacity: {
-	        // The delay when we like to start the animation
-	        begin: seq * delays + 1000,
-	        // Duration of the animation
-	        dur: durations,
-	        // The value where the animation should start
-	        from: 0,
-	        // The value where it should end
-	        to: 1
-	      }
-	    });
-	  } else if(data.type === 'label' && data.axis === 'x') {
-	    data.element.animate({
-	      y: {
-	        begin: seq * delays,
-	        dur: durations,
-	        from: data.y + 100,
-	        to: data.y,
-	        // We can specify an easing function from Chartist.Svg.Easing
-	        easing: 'easeOutQuart'
-	      }
-	    });
-	  } else if(data.type === 'label' && data.axis === 'y') {
-	    data.element.animate({
-	      x: {
-	        begin: seq * delays,
-	        dur: durations,
-	        from: data.x - 100,
-	        to: data.x,
-	        easing: 'easeOutQuart'
-	      }
-	    });
-	  } else if(data.type === 'point') {
-	    data.element.animate({
-	      x1: {
-	        begin: seq * delays,
-	        dur: durations,
-	        from: data.x - 10,
-	        to: data.x,
-	        easing: 'easeOutQuart'
-	      },
-	      x2: {
-	        begin: seq * delays,
-	        dur: durations,
-	        from: data.x - 10,
-	        to: data.x,
-	        easing: 'easeOutQuart'
-	      },
-	      opacity: {
-	        begin: seq * delays,
-	        dur: durations,
-	        from: 0,
-	        to: 1,
-	        easing: 'easeOutQuart'
-	      }
-	    });
-	  } else if(data.type === 'grid') {
-	    // Using data.axis we get x or y which we can use to construct our animation definition objects
-	    var pos1Animation = {
-	      begin: seq * delays,
-	      dur: durations,
-	      from: data[data.axis.units.pos + '1'] - 30,
-	      to: data[data.axis.units.pos + '1'],
-	      easing: 'easeOutQuart'
-	    };
+    ChartC3.prototype.init = function () {
 
-	    var pos2Animation = {
-	      begin: seq * delays,
-	      dur: durations,
-	      from: data[data.axis.units.pos + '2'] - 100,
-	      to: data[data.axis.units.pos + '2'],
-	      easing: 'easeOutQuart'
-	    };
+        //Pie Chart
+        c3.generate({
+             bindto: '#pie-chart',
+            data: {
+                columns: [
+                    ['Lulu', 46],
+                    ['Olaf', 24],
+                    ['Item 3', 30]
+                ],
+                type : 'pie'
+            },
+            // color: {
+            // 	pattern: ["#f4f8fb", "#5d9cec", "#5fbeaa"]
+            // },
+            pie: {
+		        label: {
+		          show: false
+		        }
+		    }
+        });
 
-	    var animations = {};
-	    animations[data.axis.units.pos + '1'] = pos1Animation;
-	    animations[data.axis.units.pos + '2'] = pos2Animation;
-	    animations['opacity'] = {
-	      begin: seq * delays,
-	      dur: durations,
-	      from: 0,
-	      to: 1,
-	      easing: 'easeOutQuart'
-	    };
+        //Line regions
+        c3.generate({
+            bindto: '#line-regions',
+            data: {
+                columns: [
+		            ['Grupo 1', 30, 200, 100, 400, 150, 250],
+		            ['Grupo 2', 50, 20, 10, 40, 15, 25]
+		        ],
+		        // regions: {
+		        //     'data1': [{'start':1, 'end':2, 'style':'dashed'},{'start':3}], // currently 'dashed' style only
+		        //     'data2': [{'end':3}]
+		        // },
+		        // colors: {
+	            //     data1: '#5d9cec',
+	            //     data2: '#fb6d9d'
+	            // },
+            },
 
-	    data.element.animate(animations);
-	  }
-	});
+        });
 
-	// For the sake of the example we update the chart every time it's created with a delay of 10 seconds
-	chart.on('created', function() {
-	  if(window.__exampleAnimateTimeout) {
-	    clearTimeout(window.__exampleAnimateTimeout);
-	    window.__exampleAnimateTimeout = null;
-	  }
-	  window.__exampleAnimateTimeout = setTimeout(chart.update.bind(chart), 12000);
-	});
+    },
+    $.ChartC3 = new ChartC3, $.ChartC3.Constructor = ChartC3
 
+}(window.jQuery),
 
-	//##
-	//## CHART 6 ANIMATED
-	//##
-
-	var chart = new Chartist.Pie('#chart-6', {
-	  series: [10, 20, 50, 20, 5, 50, 15],
-	  labels: [1, 2, 3, 4, 5, 6, 7]
-	}, {
-	  donut: true,
-	  showLabel: false
-	});
-
-	chart.on('draw', function(data) {
-	  if(data.type === 'slice') {
-	    // Get the total path length in order to use for dash array animation
-	    var pathLength = data.element._node.getTotalLength();
-
-	    // Set a dasharray that matches the path length as prerequisite to animate dashoffset
-	    data.element.attr({
-	      'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
-	    });
-
-	    // Create animation definition while also assigning an ID to the animation for later sync usage
-	    var animationDefinition = {
-	      'stroke-dashoffset': {
-	        id: 'anim' + data.index,
-	        dur: 1000,
-	        from: -pathLength + 'px',
-	        to:  '0px',
-	        easing: Chartist.Svg.Easing.easeOutQuint,
-	        // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
-	        fill: 'freeze'
-	      }
-	    };
-
-	    // If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
-	    if(data.index !== 0) {
-	      animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
-	    }
-
-	    // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
-	    data.element.attr({
-	      'stroke-dashoffset': -pathLength + 'px'
-	    });
-
-	    // We can't use guided mode as the animations need to rely on setting begin manually
-	    // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
-	    data.element.animate(animationDefinition, false);
-	  }
-	});
-
-	// For the sake of the example we update the chart every time it's created with a delay of 8 seconds
-	chart.on('created', function() {
-	  if(window.__anim21278907124) {
-	    clearTimeout(window.__anim21278907124);
-	    window.__anim21278907124 = null;
-	  }
-	  window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
-	});
-
-	//##
-	//## CHART 7 EXAMPLE
-	//##
-
-	new Chartist.Line('#chart-7', {
-		labels: ['27/07', '03/08', '10/08', '17/08', '24/08'],
-		series: [
-			[150, 135,150, 97, 144],
-			[57, 112, 110, 45, 150],
-			[99, 145, 122, 99, 70],
-			[120, 90, 95, 70, 100]
-		]
-		}, {
-		fullWidth: true,
-		chartPadding: {
-			right: 40,
-			left:20
-		},
-		high: 150,
-	  fullWidth: true,
-	  axisY: {
-	    onlyInteger: true,
-	    offset: 20
-  	}
-	});
-
-	//##
-	//## CHART 8 EXAMPLE
-	//##
-
-	var chart = new Chartist.Line('#chart-8', {
-	  labels: [1, 2, 3],
-	  series: [
-	    [
-	      {meta: 'description', value: 1 },
-	      {meta: 'description', value: 5},
-	      {meta: 'description', value: 3}
-	    ],
-	    [
-	      {meta: 'other description', value: 2},
-	      {meta: 'other description', value: 4},
-	      {meta: 'other description', value: 2}
-	    ]
-	  ]
-	}, {
-	  low: 0,
-	  high: 8,
-	  fullWidth: true,
-	  plugins: [
-	    Chartist.plugins.tooltip()
-	  ]
-	});
-
+//initializing
+function($) {
+    "use strict";
+    $.ChartC3.init()
+}(window.jQuery);
 
 </script>
 {% endblock %}
