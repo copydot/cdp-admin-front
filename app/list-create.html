@@ -10,8 +10,9 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
 <!--build:css css/main.min.css -->
 
-<link rel="stylesheet" href="./css/main.css">
 <link rel="stylesheet" href="./css/dataTables.bootstrap4.css">
+<link rel="stylesheet" href="./css/c3.min.css">
+<link rel="stylesheet" href="./css/main.css">
 <!-- endbuild -->
 
 
@@ -46,6 +47,14 @@
         <li class="nav-item">
           <a class="nav-link active" href="#">Notificaciones <span class="badge badge-danger text-light">3</span></a>
         </li>
+				<li class="nav-item dropdown">
+					<a class="nav-link active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Recursos <i class="fas fa-fw fa-wrench"></i>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="charts.html">Charts <i class="fas fa-fw fa-chart-bar"></i></a>
+					</div>
+				</li>
         <li class="nav-item dropdown">
           <a class="nav-link active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Username <i class="fas fa-fw fa-user-circle"></i>
@@ -243,6 +252,14 @@
 <script src="js/jquery.dataTables.min.js" charset="utf-8"></script>
 <script src="js/dataTables.bootstrap4.js" charset="utf-8"></script>
 <script src="js/jquery.countdown.min.js" charset="utf-8"></script>
+
+<script src="js/chartist.min.js" charset="utf-8"></script>
+<script src="js/chartist-plugin-tooltip.min.js" charset="utf-8"></script>
+
+<script src="js/c3.min.js" charset="utf-8"></script>
+<script src="js/d3.min.js" charset="utf-8"></script>
+<script src="js/jquery.c3-chart.init.js" charset="utf-8"></script>
+
 <script src="js/main.js"></script>
 <!-- endbuild -->
 
