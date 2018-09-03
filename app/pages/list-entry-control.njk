@@ -1,0 +1,131 @@
+{% extends "layout.njk" %}
+
+{% block title %}Lista de Invitados{% endblock %}
+
+{% block content %}
+<div class="container">
+
+  <section>
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+        <li class="breadcrumb-item"><a href="list-view.html">Eventos</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Listas</li>
+      </ol>
+    </nav>
+
+    {% include "partials/heading-event.njk" %}
+
+    <div class="card mb-3 ">
+      <div class="card-body table-responsive">
+        <table id="datatable" class="table table-striped table-bordered" style="width:100%">
+          <thead>
+            <tr>
+              <th>In</th>
+              <th>DNI</th>
+              <th>Invitado</th>
+              <th>Lista</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i in range(1, 150) %}
+            <tr>
+              <td>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck{{ i }}">
+                  <label class="custom-control-label" for="customCheck{{ i }}">In</label>
+                </div>
+              </td>
+              <td>12345678</td>
+              <td>invitado {{ i }}</td>
+              <td>Lista {{ i }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div>
+      <button type="button" name="button" class="btn btn-lg btn-info" id="btn-close-list">
+        Cerrar lista
+      </button>
+      <a href="list-print.html" class="btn btn-lg btn-light float-right" id="btn-print-list">Imprimir Lista</a>
+    </div>
+
+
+  </section>
+
+</div>
+{% endblock %}
+
+{% block js %}
+  <script type="text/javascript">
+  // datatables
+  $(document).ready(function() {
+    $('#datatable').DataTable({
+      "order": [[ 2, "asc" ]],
+      "lengthMenu": [[ -1, 10, 25, 50], ["All", 10, 25, 50]],
+      "language": {
+          "lengthMenu": "_MENU_",
+          "search": "Buscar:",
+          "zeroRecords":    "No se encontraron registros coincidentes",
+          "info": "_PAGE_ de _PAGES_",
+          "infoEmpty": "No hay registros disponibles",
+          "infoFiltered": "(filtrado de _MAX_ registros totales)",
+      "paginate": {
+          "first":      "<<",
+          "last":       ">>",
+          "next":       ">",
+          "previous":   "<"
+      },
+
+      }
+    });
+
+  // countdown
+  $('#btn-print-list').addClass('disabled');
+
+  // temporal para obtener la fecha y hora actual y agregarle un minuto mas para testaer
+  var tiempo = new Date();
+  var date = tiempo.getDate();
+  var month = tiempo.getMonth()+1;
+  var year = tiempo.getFullYear();
+  var hora = tiempo.getHours();
+  var minuto = tiempo.getMinutes()+1;
+  var segundo = tiempo.getSeconds();
+
+  var fecha = year + '/' + month + '/' + date;
+  var tiempo = hora + ':' + minuto + ':' + segundo;
+
+  var limite = fecha + ' ' + tiempo;
+  // fin temporal
+
+  $('#clock').countdown(limite) // pasar fecha y hora de cierre de la lista
+  .on('update.countdown', function(event) {
+    var format = '%H:%M:%S';
+    if(event.offset.totalDays > 0) {
+      format = '%-d dia%!d ' + format;
+    }
+    if(event.offset.weeks > 0) {
+      format = '%-w semana%!w ' + format;
+    }
+    $(this).html(event.strftime(format));
+  })
+  .on('finish.countdown', function(event) {
+    $(this).html('<span class="text-danger">Lista cerrada!</span>')
+      .parent().addClass('disabled');
+    $('#btn-close-list').addClass('disabled');
+    $('#btn-close-list').addClass('disabled');
+    $('#btn-close-list').addClass('disabled');
+    $('#btn-close-list').removeClass('btn-info');
+    $('#btn-close-list').addClass('btn-light');
+
+    $('#btn-print-list').removeClass('disabled');
+    $('#btn-print-list').removeClass('btn-light');
+    $('#btn-print-list').addClass('btn-info');
+  });
+} );
+  </script>
+{% endblock %}
