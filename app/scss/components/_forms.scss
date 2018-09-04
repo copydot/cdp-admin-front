@@ -1,0 +1,14 @@
+//
+// forms
+
+.custom-control{
+	.custom-control-input,
+	.custom-control-label{
+		display: block;
+		cursor: pointer;
+		&:hover{
+			color: $primary;
+			text-decoration: underline;
+		}
+	}
+}
