@@ -7075,6 +7075,15 @@ footer {
 .dataTables_paginate .paginate_button {
   margin-top: 10px; }
 
+.custom-control .custom-control-input,
+.custom-control .custom-control-label {
+  display: block;
+  cursor: pointer; }
+  .custom-control .custom-control-input:hover,
+  .custom-control .custom-control-label:hover {
+    color: #007bff;
+    text-decoration: underline; }
+
 .print .table {
   font-size: 1.4em; }
   .print .table tr th,
