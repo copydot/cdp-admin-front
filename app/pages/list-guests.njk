@@ -10,12 +10,21 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
-        <li class="breadcrumb-item"><a href="list-view.html">Eventos</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Listas</li>
+        <li class="breadcrumb-item"><a href="event-view.html">Eventos</a></li>
+        <li class="breadcrumb-item"><a href="list-view.html">Listas</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Invitados</li>
       </ol>
     </nav>
 
-    {% include "partials/heading-event.njk" %}
+		<div class="heading heading-sm">
+			<div class="d-flex flex-column flex-sm-row flex-nowrap">
+				<div class="order-sm-2 pb-2"><a href="list-view.html" class="btn btn-sm btn-light text-uppercase">Volver</a></div>
+				<div class="order-sm-1 flex-grow-1">
+					<span class="bg-danger text-white text-uppercase px-1">RODRIGO DP & KNOWBRUo</span>
+					<span class="bg-info text-white text-uppercase px-1">Lista de Invitados</span>
+				</div>
+			</div>
+		</div>
 
     {% include "partials/list-person-search.njk" %}
 

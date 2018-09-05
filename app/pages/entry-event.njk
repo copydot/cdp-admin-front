@@ -1,0 +1,32 @@
+{% extends "layout.njk" %}
+
+{% block title %}Control de Listas{% endblock %}
+
+{% block content %}
+<div class="container">
+
+  <section class="panel">
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active">Ingresantes</li>
+      </ol>
+    </nav>
+
+    <div class="heading heading-sm">
+    	<div class="d-flex flex-column flex-sm-row flex-nowrap">
+    		<div class="order-sm-2 pb-2"><a href="dashboard.html" class="btn btn-sm btn-light text-uppercase">Volver</a></div>
+    		<div class="order-sm-1 flex-grow-1"><span class="bg-danger text-white text-uppercase px-1">Eventos</span></div>
+    	</div>
+    </div>
+
+    <div class="row">
+      {% include "partials/entry-event-module.njk" %}
+    </div>
+
+  </section>
+
+</div>
+{% endblock %}
+
+{% block js %}{% endblock %}
