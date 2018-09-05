@@ -25,31 +25,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="dashboard.html">Eventos</a>
+          <a class="nav-link" href="event-view.html">Eventos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="list-view.html">Listas</a>
+          <a class="nav-link" href="entry-event.html">Ingresantes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Personas</a>
+          <a class="nav-link" href="charts.html">Analitycs</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="user-list.html">Usuarios</a>
-        </li>
+        
 
       </ul>
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Notificaciones <span class="badge badge-danger text-light">3</span></a>
-        </li>
-				<li class="nav-item dropdown">
-					<a class="nav-link active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Recursos <i class="fas fa-fw fa-wrench"></i>
-					</a>
-					<div class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="charts.html">Charts <i class="fas fa-fw fa-chart-bar"></i></a>
-					</div>
-				</li>
+        
         <li class="nav-item dropdown">
           <a class="nav-link active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Username <i class="fas fa-fw fa-user-circle"></i>
@@ -73,21 +61,20 @@
 
     <section class="panel">
 
-
 			<nav aria-label="breadcrumb">
 	      <ol class="breadcrumb">
-	        <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
-	        <li class="breadcrumb-item active" aria-current="page">Eventos</li>
+          <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+					<li class="breadcrumb-item"><a href="event-view.html">Eventos</a></li>
+	        <li class="breadcrumb-item active" aria-current="page">Listas</li>
 	      </ol>
 	    </nav>
 
-      <div class="heading heading-sm mb-0">
-	<div class="d-flex flex-column flex-sm-row flex-nowrap">
-		<div class="order-sm-2 pb-2"><a href="dashboard.html" class="btn btn-sm btn-light text-uppercase">Volver</a></div>
-		<div class="order-sm-1 flex-grow-1"><span class="bg-danger text-white text-uppercase px-1">RODRIGO DP & KNOWBRUo</span></div>
-	</div>
-</div>
-
+      <div class="heading heading-sm">
+      	<div class="d-flex flex-column flex-sm-row flex-nowrap">
+      		<div class="order-sm-2"><a href="event-view.html" class="btn btn-sm btn-light text-uppercase">Volver</a></div>
+      		<div class="order-sm-1 flex-grow-1"><span class="bg-danger text-white text-uppercase px-1">RODRIGO DP & KNOWBRUo</span></div>
+      	</div>
+      </div>
 
       <div class="row ">
 
@@ -95,7 +82,7 @@
 					<div class="card bg-info text-white">
 						<div class="card-header"></div>
 						<a href="list-create.html" class="btn-block">
-							<div class="card-body card-body-sm">
+							<div class="card-body card-body-lg">
 								<div class=""></div>
 								<div class="text-white">
 									<i class="fas fa-3x fa-plus"></i>
@@ -109,41 +96,62 @@
 					</div>
 				</div>
 
-        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-          <div class="card">
-            <div class="card-header bg-info"></div>
-            <a href="list-guests.html" class="card-btn">
-              <div class="card-body card-body-sm">
-                <div class="card-date"></div>
-                <div class="card-title font-weight-bold text-uppercase text-center">Invitados</div>
-                <div class="card-list">
-                  Invitados <span class="badge badge-info">20/20</span>
-                </div>
-              </div>
-            </a>
-            <div class="card-footer bg-info text-center text-light">
-              <a href="list-update.html" class="text-white">editar lista</a>
-            </div>
-          </div>
-        </div>
+				<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+	<div class="card">
+		<div class="card-header bg-info"></div>
+		<a href="list-guests.html" class="card-btn">
+			<div class="card-body card-body-lg">
+				<div class="card-date text-uppercase">Lista de Invitados</div>
+				<div class="card-title font-weight-bold text-uppercase text-center px-2">Gallery</div>
+				<div class="card-list">
+					Invitados <span class="badge badge-info">105 de 150</span>
+				</div>
+			</div>
+		</a>
+		<div class="card-footer bg-info text-center text-light">
+			<a href="list-update.html" class="text-white">editar lista</a>
+		</div>
+	</div>
+</div>
 
-        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-          <div class="card">
-            <div class="card-header bg-info"></div>
-            <a href="list-guests.html" class="card-btn">
-              <div class="card-body card-body-sm">
-                <div class="card-date"></div>
-                <div class="card-title font-weight-bold text-uppercase text-center">Previa</div>
-                <div class="card-list">
-                  Invitados <span class="badge badge-info">15/  20</span>
-                </div>
-              </div>
-            </a>
-            <div class="card-footer bg-info text-center text-light">
-              <a href="list-update.html" class="text-white">editar lista</a>
-            </div>
-          </div>
-        </div>
+<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+	<div class="card">
+		<div class="card-header bg-info"></div>
+		<a href="list-guests.html" class="card-btn">
+			<div class="card-body card-body-lg">
+				<div class="card-date text-uppercase">Lista de Invitados</div>
+				<div class="card-title font-weight-bold text-uppercase text-center px-2">Orange</div>
+				<div class="card-list">
+					Invitados <span class="badge badge-info">78 de 150</span>
+				</div>
+			</div>
+		</a>
+		<div class="card-footer bg-info text-center text-light">
+			<a href="list-update.html" class="text-white">editar lista</a>
+		</div>
+	</div>
+</div>
+
+<div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+	<div class="card">
+		<div class="card-header bg-info"></div>
+		<a href="list-guests.html" class="card-btn">
+			<div class="card-body card-body-lg">
+				<div class="card-date text-uppercase">Lista de Invitados</div>
+				<div class="card-title font-weight-bold text-uppercase text-center px-2">Ex</div>
+				<div class="card-list">
+					Invitados <span class="badge badge-info">37 de 150</span>
+				</div>
+			</div>
+		</a>
+		<div class="card-footer bg-info text-center text-light">
+			<a href="list-update.html" class="text-white">editar lista</a>
+		</div>
+	</div>
+</div>
+
+
+        
 
 
       </div>

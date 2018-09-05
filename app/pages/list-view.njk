@@ -9,15 +9,20 @@
 
     <section class="panel">
 
-
 			<nav aria-label="breadcrumb">
 	      <ol class="breadcrumb">
-	        <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
-	        <li class="breadcrumb-item active" aria-current="page">Eventos</li>
+          <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+					<li class="breadcrumb-item"><a href="event-view.html">Eventos</a></li>
+	        <li class="breadcrumb-item active" aria-current="page">Listas</li>
 	      </ol>
 	    </nav>
 
-      {% include "partials/heading-event.njk" %}
+      <div class="heading heading-sm">
+      	<div class="d-flex flex-column flex-sm-row flex-nowrap">
+      		<div class="order-sm-2"><a href="event-view.html" class="btn btn-sm btn-light text-uppercase">Volver</a></div>
+      		<div class="order-sm-1 flex-grow-1"><span class="bg-danger text-white text-uppercase px-1">RODRIGO DP & KNOWBRUo</span></div>
+      	</div>
+      </div>
 
       <div class="row ">
 
@@ -25,7 +30,7 @@
 					<div class="card bg-info text-white">
 						<div class="card-header"></div>
 						<a href="list-create.html" class="btn-block">
-							<div class="card-body card-body-sm">
+							<div class="card-body card-body-lg">
 								<div class=""></div>
 								<div class="text-white">
 									<i class="fas fa-3x fa-plus"></i>
@@ -39,7 +44,9 @@
 					</div>
 				</div>
 
-        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+				{% include "partials/lists-list-module.njk" %}
+
+        {# <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
           <div class="card">
             <div class="card-header bg-info"></div>
             <a href="list-guests.html" class="card-btn">
@@ -73,7 +80,7 @@
               <a href="list-update.html" class="text-white">editar lista</a>
             </div>
           </div>
-        </div>
+        </div> #}
 
 
       </div>
