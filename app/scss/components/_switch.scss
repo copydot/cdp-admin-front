@@ -2,8 +2,11 @@
 // switch
 /* The switch - the box around the slider */
 
-$switch-height:   30px !default;
-$switch-width:    56px !default;
+$switch-height:     24px !default;
+$switch-width:      42px !default;
+$button-radius:     18px !default;
+$button-translate:  18px !default;
+$button-transition: .1s !default;
 
 .switch {
  position: relative;
@@ -12,7 +15,6 @@ $switch-width:    56px !default;
  height: $switch-height;
  margin-right: 10px;
  margin-bottom: 0px;
- // background-color: orange;
 }
 
 /* Hide default HTML checkbox */
@@ -29,20 +31,20 @@ $switch-width:    56px !default;
  right: 0;
  bottom: 0;
  background-color: #ccc;
- -webkit-transition: .4s;
- transition: .4s;
+ -webkit-transition: $button-transition;
+ transition: $button-transition;
 }
 
 .slider:before {
  position: absolute;
  content: "";
- height: 24px;
- width: 24px;
+ height: $button-radius;
+ width: $button-radius;
  left: 3px;
  bottom: 3px;
  background-color: white;
- -webkit-transition: .4s;
- transition: .4s;
+ -webkit-transition: $button-transition;
+ transition: $button-transition;
 }
 
 input:checked + .slider {
@@ -50,13 +52,13 @@ input:checked + .slider {
 }
 
 input:focus + .slider {
- box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196F3;
 }
 
 input:checked + .slider:before {
- -webkit-transform: translateX(26px);
- -ms-transform: translateX(26px);
- transform: translateX(26px);
+ -webkit-transform: translateX($button-translate);
+ -ms-transform: translateX($button-translate);
+ transform: translateX($button-translate);
 }
 
 /* Rounded sliders */

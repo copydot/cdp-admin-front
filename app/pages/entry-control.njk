@@ -40,21 +40,22 @@
           <tbody>
             {% for i in range(01, 150) %}
             <tr>
-              <td class="py-2">
+              <td class="py-3 px-2">
                 <div class="d-flex align-items-center">
                   <label class="switch">
-                    <input type="checkbox" {% if i == 1 %}
-                    checked
-                    {% endif %}>
+                    <input type="checkbox" name="checked-{{1}}" id="checked-{{i}}">
                     <span class="slider round"></span>
                   </label>
                   APELLIDO{{ i }}, Nombre
                   {% if i == 1 %}
-                  <i class="fas fa-check text-success ml-2"></i>
+                  <span id="update-guest-1" class="text-success ml-2"> <span class="d-none d-md-inline">actualizado</span> <i class="fas fa-check"></i></span>
+                  {% endif %}
+                  {% if i == 2 %}
+                  <span id="update-guest-2" class="text-danger ml-2"> <span class="d-none d-md-inline">error</span> <i class="fas fa-exclamation"></i></span>
                   {% endif %}
                 </div>
               </td>
-              <td>12345678</td>
+              <td  class="py-3 px-2">12345678</td>
               <td class="d-none d-sm-block">
                 {% if i < 90 %}
                   FEMENINO
@@ -67,10 +68,6 @@
           </tbody>
         </table>
       </div>
-    </div>
-
-    <div>
-      <a href="javascript:;" class="btn btn-lg btn-info">Confirmar</a>
     </div>
 
   </section>
@@ -101,6 +98,26 @@
 
       }
     });
-} );
+
+    $("#update-guest-1").hide();
+    $("#checked-1").on( 'change', function() {
+      setTimeout(function() {
+        $("#update-guest-1").show();
+      },100);
+      setTimeout(function() {
+        $("#update-guest-1").fadeOut(300);
+      },1000);
+    });
+    $("#update-guest-2").hide();
+    $("#checked-2").on( 'change', function() {
+      setTimeout(function() {
+        $("#update-guest-2").show();
+      },100);
+      setTimeout(function() {
+        $("#update-guest-2").fadeOut(300);
+      },1000);
+    });
+
+  });
   </script>
 {% endblock %}
